@@ -184,13 +184,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const swiper = new Swiper('.swiper', {
         // Optional parameters
-        effect: "coverflow",
+        // effect: "coverflow",
+        speed: 300,
         direction: 'horizontal',
         loop: true,
         slidesPerView: 3,
-        spaceBetween: 50,
+        spaceBetween: 160,
         allowTouchMove: true,
-        centerSlider: true,
+        centeredSlides: true,
       
         // Navigation arrows
         navigation: {
@@ -198,13 +199,13 @@ document.addEventListener("DOMContentLoaded", function () {
           prevEl: '.swiper-button-prev',
         },
 
-        coverflowEffect: {
-            rotate: 0,
-            stretch: 0,
-            depth: 100,
-            modifier: 2,
-            slideShadows: true,
-          },
+        // coverflowEffect: {
+        //     rotate: 0,
+        //     stretch: 0,
+        //     depth: 100,
+        //     modifier: 2,
+        //     slideShadows: true,
+        //   },
       });
 });
 

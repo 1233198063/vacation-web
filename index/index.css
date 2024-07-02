@@ -799,14 +799,14 @@
 .home-hero-container .slide-bottom .to-the-location:hover {
   transform: translateX(10.41666667px);
 }
-.destinations-section .container {
+.destinations-section {
   margin: 156.25px 0px 41.66666667px 78.125px;
+  height: 80vh;
 }
 .destinations-section .container .destinations-heading {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0px 0px 0px -78.125px;
 }
 .destinations-section .container .destinations-heading h1 {
   font-size: 3rem;
@@ -814,15 +814,13 @@
 }
 .destinations-section .container .swiper {
   width: 100%;
-  height: 625px;
+  height: 100%;
+  margin: 41.66666667px auto;
   position: relative;
-  padding: 78.125px 0px;
 }
 .destinations-section .container .swiper .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background-size: cover;
-  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -830,29 +828,24 @@
   color: #fff;
   border-radius: 5px;
 }
-.destinations-section .container .swiper .swiper-slide .overlay {
-  position: absolute;
-  left: 0%;
-  top: 0%;
-  right: 0%;
-  bottom: 0%;
-  background-color: rgba(15, 19, 38, 0.2);
-}
-.destinations-section .container .swiper .swiper-slide img {
+.destinations-section .container .swiper .swiper-slide .swiper-slide img {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 600px;
+  height: 400px;
   object-fit: cover;
 }
-.destinations-section .container .swiper .swiper-slide .title {
-  font-size: 26.04166667px;
+.destinations-section .container .swiper .swiper-slide .titles {
+  position: absolute;
+  bottom: 1.04166667px;
   margin: 10.41666667px 0 41.66666667px 0;
-  z-index: 1;
+  z-index: 201;
+}
+.destinations-section .container .swiper .swiper-slide .titles .title {
+  font-size: 26.04166667px;
   transition: font-size 0.5s ease;
 }
-.destinations-section .container .swiper .swiper-slide .subtitle {
+.destinations-section .container .swiper .swiper-slide .titles .subtitle {
   font-size: 10.41666667px;
-  z-index: 1;
   transition: font-size 0.5s ease;
 }
 .destinations-section .container .swiper .swiper-slide:hover .title {
@@ -879,8 +872,8 @@
 .destinations-section .container .swiper .swiper-button-prev {
   position: absolute;
   top: 546.875px;
-  width: 46.875px;
-  height: 46.875px;
+  width: 52.08333333px;
+  height: 52.08333333px;
   background-color: #ffffff;
   border: 1px solid #efeff7;
   border-radius: 100%;
@@ -890,4 +883,8 @@
 }
 .destinations-section .container .swiper .swiper-button-prev {
   left: calc(50% - 5rem);
+}
+.destinations-section .container .swiper .swiper-slide.swiper-slide-active {
+  transform: scale(1.2, 1.2);
+  z-index: 200;
 }
