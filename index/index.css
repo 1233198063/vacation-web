@@ -576,7 +576,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  transition: opacity 0.5s linear;
+  transition: opacity 0.3s linear;
 }
 .home-hero .overlay {
   position: absolute;
@@ -800,91 +800,99 @@
   transform: translateX(10.41666667px);
 }
 .destinations-section {
-  margin: 156.25px 0px 41.66666667px 78.125px;
-  height: 80vh;
+  margin: 156.25px 0px 52.08333333px 78.125px;
 }
-.destinations-section .container .destinations-heading {
+.destinations-section .destinations-heading {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 156.25px 0 83.33333333px 0;
 }
-.destinations-section .container .destinations-heading h1 {
+.destinations-section .destinations-heading h1 {
   font-size: 3rem;
   margin: 41.66666667px 0px;
 }
-.destinations-section .container .swiper {
-  width: 100%;
-  height: 100%;
-  margin: 41.66666667px auto;
+.destinations-section .destinations-slide {
+  margin: 0px 0px 156.25px 0px;
+}
+.destinations-section .destinations-slide .swiper {
+  overflow: visible;
   position: relative;
 }
-.destinations-section .container .swiper .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  color: #fff;
-  border-radius: 5px;
-}
-.destinations-section .container .swiper .swiper-slide .swiper-slide img {
-  display: block;
-  width: 600px;
-  height: 400px;
-  object-fit: cover;
-}
-.destinations-section .container .swiper .swiper-slide .titles {
+.destinations-section .destinations-slide .swiper .buttons {
   position: absolute;
-  bottom: 1.04166667px;
-  margin: 10.41666667px 0 41.66666667px 0;
-  z-index: 201;
+  width: 151.04166667px;
+  height: 62.5px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
 }
-.destinations-section .container .swiper .swiper-slide .titles .title {
-  font-size: 26.04166667px;
-  transition: font-size 0.5s ease;
+.destinations-section .destinations-slide .swiper .buttons .swiper-button-next,
+.destinations-section .destinations-slide .swiper .buttons .swiper-button-prev {
+  background-color: #ffffff;
+  width: 62.5px;
+  height: 62.5px;
+  align-items: center;
+  border: solid 1px #efeff7;
+  border-radius: 100%;
 }
-.destinations-section .container .swiper .swiper-slide .titles .subtitle {
-  font-size: 10.41666667px;
-  transition: font-size 0.5s ease;
-}
-.destinations-section .container .swiper .swiper-slide:hover .title {
-  font-size: 31.25px;
-}
-.destinations-section .container .swiper .swiper-slide:hover .subtitle {
-  font-size: 15.625px;
-}
-.destinations-section .container .swiper .swiper-button-next:after,
-.destinations-section .container .swiper .swiper-rtl .swiper-button-prev:after {
+.destinations-section .destinations-slide .swiper .buttons .swiper-button-next:after {
   content: '\e5c8';
   font-family: 'Material Symbols Outlined';
   color: #081c3a;
   font-size: medium;
 }
-.destinations-section .container .swiper .swiper-button-prev:after,
-.destinations-section .container .swiper .swiper-rtl .swiper-button-prev:after {
+.destinations-section .destinations-slide .swiper .buttons .swiper-button-prev:after {
   content: '\e5c4';
   font-family: 'Material Symbols Outlined';
   color: #081c3a;
   font-size: medium;
 }
-.destinations-section .container .swiper .swiper-button-next,
-.destinations-section .container .swiper .swiper-button-prev {
+.destinations-section .destinations-slide .swiper .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  color: #fff;
+  transition: all 1s;
+  overflow: hidden;
+}
+.destinations-section .destinations-slide .swiper .swiper-slide img {
+  position: relative;
+  border-radius: 2.60416667px;
+}
+.destinations-section .destinations-slide .swiper .swiper-slide .gradient-overlay {
   position: absolute;
-  top: 546.875px;
-  width: 52.08333333px;
-  height: 52.08333333px;
-  background-color: #ffffff;
-  border: 1px solid #efeff7;
-  border-radius: 100%;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  background-image: linear-gradient(to top, rgba(15, 19, 38, 0.6) 10%, transparent 100%);
+  border-radius: 2.60416667px;
+  z-index: 1;
 }
-.destinations-section .container .swiper .swiper-button-next {
-  right: calc(50% - 5rem);
+.destinations-section .destinations-slide .swiper .swiper-slide .titles {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10.41666667px 0 26.04166667px 0;
+  z-index: 201;
 }
-.destinations-section .container .swiper .swiper-button-prev {
-  left: calc(50% - 5rem);
+.destinations-section .destinations-slide .swiper .swiper-slide .titles .title {
+  font-size: 20.83333333px;
+  transition: font-size 0.5s ease;
 }
-.destinations-section .container .swiper .swiper-slide.swiper-slide-active {
-  transform: scale(1.2, 1.2);
-  z-index: 200;
+.destinations-section .destinations-slide .swiper .swiper-slide .titles .subtitle {
+  font-size: 7.8125px;
+  transition: font-size 0.5s ease;
+}
+.destinations-section .destinations-slide .swiper .swiper-slide:hover .title {
+  font-size: 26.04166667px;
+}
+.destinations-section .destinations-slide .swiper .swiper-slide:hover .subtitle {
+  font-size: 10.41666667px;
+}
+.destinations-section .destinations-slide .swiper .swiper-slide-active {
+  transform: scale(1.3);
 }

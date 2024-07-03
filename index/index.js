@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateHero(index) {
         // Fade out effect
-        heroBg.style.opacity = '0.5';
+        heroBg.style.opacity = '0.9';
         
         // Wait for the fade out transition to complete before updating the content and fading in
         setTimeout(() => {
@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
             heroLocation.textContent = heroArr[index].location;
             locationDetails.textContent = heroArr[index].details;
             heroBg.style.opacity = '1';
-        }, 500); 
+        }, 300); 
     }
     
     updateHero(i);  // Initialize the content
@@ -156,40 +156,12 @@ document.addEventListener("DOMContentLoaded", function () {
         updateHero(i);
     });
 
-    // heroBg.style.backgroundImage = `url(${heroArr[i].img})`;
-    // heroLocation.textContent = heroArr[i].location;
-    // locationDetails.textContent = heroArr[i].details;
-
-
-    // heroNext.addEventListener('click', () => {
-    //     i++;
-    //     if (i > heroArr.length - 1) {
-    //         i = 0;
-    //     }
-    //     heroBg.style.backgroundImage = `url(${heroArr[i].img})`;
-    //     heroLocation.textContent = heroArr[i].location;
-    //     locationDetails.textContent = heroArr[i].details;
-    // });
-
-    // heroPrev.addEventListener('click', () => {
-    //     i--;
-    //     if (i < 0) {
-    //         i = heroArr.length - 1;
-    //     }
-    //     heroBg.style.backgroundImage = `url(${heroArr[i].img})`;
-    //     heroLocation.textContent = heroArr[i].location;
-    //     locationDetails.textContent = heroArr[i].details;
-    // });
-
-
+    // desinations section swiper
     const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        // effect: "coverflow",
-        speed: 300,
-        direction: 'horizontal',
+        speed: 900,
         loop: true,
         slidesPerView: 3,
-        spaceBetween: 160,
+        spaceBetween: 80,
         allowTouchMove: true,
         centeredSlides: true,
       
@@ -199,13 +171,32 @@ document.addEventListener("DOMContentLoaded", function () {
           prevEl: '.swiper-button-prev',
         },
 
-        // coverflowEffect: {
-        //     rotate: 0,
-        //     stretch: 0,
-        //     depth: 100,
-        //     modifier: 2,
-        //     slideShadows: true,
-        //   },
-      });
+    });
+
+    //when mouse move on the swiper images
+    const swiperSlides = document.querySelectorAll('.swiper-slide');
+    
+    swiperSlides.forEach(slide => {
+        const layer = slide.querySelector('.gradient-overlay');
+        const slideImg = slide.querySelector('img');
+
+        layer.addEventListener('mousemove', (e) => {
+            const rect = layer.getBoundingClientRect();
+            const mouseX = e.clientX - rect.left;
+            const mouseY = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const moveX = (centerX - mouseX) / 50;
+            const moveY = (centerY - mouseY) / 50;
+
+            slideImg.style.transform = `scale(1.1) translate(${moveX}px, ${moveY}px)`;
+        });
+
+        layer.addEventListener('mouseout', function() {
+            slideImg.style.transform = 'scale(1)';
+        });
+    });
 });
 

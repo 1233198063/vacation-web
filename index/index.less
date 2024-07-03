@@ -724,7 +724,7 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
 
-    transition: opacity 0.5s linear;
+    transition: opacity 0.3s linear;
 
     .overlay {
         position: absolute;
@@ -1014,127 +1014,124 @@
 
 
 .destinations-section {
-    margin: (3000px / @vw) 0px (800px / @vw) (1500px / @vw);
-    height: 80vh;
+    margin: (3000px / @vw) 0px (1000px / @vw) (1500px / @vw);
 
-    .container {
+    .destinations-heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: (3000px / @vw) 0 (1600px / @vw) 0;
 
-        .destinations-heading {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            // margin: 0px 0px 0px -(1500px / @vw);
-
-            h1 {
-                font-size: 3rem;
-                margin: (800px / @vw) 0px;
-            }
+        h1 {
+            font-size: 3rem;
+            margin: (800px / @vw) 0px;
         }
+    }
+
+    .destinations-slide {
+        margin: 0px 0px (3000px / @vw) 0px;
 
         .swiper {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            margin: (800px / @vw) auto;
-
+            overflow: visible;
             position: relative;
 
-            .swiper-slide {
-                text-align: center;
-                font-size: 18px;
+            .buttons {
+                position: absolute;
+                width: (2900px / @vw);
+                height: (1200px / @vw);
+                left: 50%;
+                transform: translate(-50%);
+                z-index: 1;
 
-                // transition: background-size 0.5s ease;
+                .swiper-button-next,
+                .swiper-button-prev {
+                    background-color: rgb(255, 255, 255);
+                    width: (1200px / @vw);
+                    height: (1200px / @vw);
+                    align-items: center;
+                    border: solid 1px #efeff7;
+                    border-radius: 100%;
+                }
 
+                .swiper-button-next:after {
+                    content: '\e5c8';
+                    font-family: 'Material Symbols Outlined';
+                    color: #081c3a;
+                    font-size: medium;
+                }
+
+                .swiper-button-prev:after {
+                    content: '\e5c4';
+                    font-family: 'Material Symbols Outlined';
+                    color: #081c3a;
+                    font-size: medium;
+                }
+            }
+
+            .swiper-slide{
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
                 align-items: center;
 
                 color: #fff;
+                transition: all 1s;
+                overflow: hidden;
 
-                border-radius: 5px;
+                img {
+                    position: relative;
+                    border-radius: (50px / @vw);
+                }
 
-                .swiper-slide img {
-                    display: block;
-                    width: 600px;
-                    height: 400px;
-                    object-fit: cover;
+                .gradient-overlay {
+                    position: absolute;
+                    left: 0%;
+                    top: 0%;
+                    right: 0%;
+                    bottom: 0%;
+
+                    background-image:linear-gradient( to top, rgba(15, 19, 38, 0.6) 10%, transparent 100%);
+
+                    border-radius: (50px / @vw);
+                    z-index: 1;
                 }
 
                 .titles {
                     position: absolute;
-                    bottom: (20px / @vw);
+    
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
 
-                    margin: (200px / @vw) 0 (800px / @vw) 0;
-
+                    margin: (200px / @vw) 0 (500px / @vw) 0;
+    
                     z-index: 201;
-
+    
                     .title {
-                        font-size: (500px / @vw);
+                        font-size: (400px / @vw);
                         transition: font-size 0.5s ease;
                     }
-
+    
                     .subtitle {
-                        font-size: (200px / @vw);
+                        font-size: (150px / @vw);
                         transition: font-size 0.5s ease;
                     }
                 }
             }
 
-            // .swiper-slide:hover {
-            //     background-size: cover;
-            // }
-
             .swiper-slide:hover .title {
-                font-size: (600px / @vw);
-            }
-
-            .swiper-slide:hover .subtitle {
-                font-size: (300px / @vw);
-            }
-
-            .swiper-button-next:after,
-            .swiper-rtl .swiper-button-prev:after {
-                content: '\e5c8';
-                font-family: 'Material Symbols Outlined';
-                color: #081c3a;
-                font-size: medium;
-            }
-
-            .swiper-button-prev:after,
-            .swiper-rtl .swiper-button-prev:after {
-                content: '\e5c4';
-                font-family: 'Material Symbols Outlined';
-                color: #081c3a;
-                font-size: medium;
-            }
-
-            .swiper-button-next,
-            .swiper-button-prev {
-                position: absolute;
-                top: (10500px / @vw);
-
-                width: (1000px / @vw);
-                height: (1000px / @vw);
-                background-color: rgb(255, 255, 255);
-                border: 1px solid #efeff7;
-                border-radius: 100%;
-            }
-
-            .swiper-button-next {
-                right: calc(50% - 5rem);
-            }
-
-            .swiper-button-prev {
-                left: calc(50% - 5rem);
-            }
-
-            .swiper-slide.swiper-slide-active {
-                transform: scale(1.2, 1.2);
-                z-index: 200;
+                    font-size: (500px / @vw);
+                }
+        
+                .swiper-slide:hover .subtitle {
+                    font-size: (200px / @vw);
+                }
+            
+            .swiper-slide-active {
+                transform: scale(1.3);
             }
         }
 
-
     }
+
 }
