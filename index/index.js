@@ -156,6 +156,53 @@ document.addEventListener("DOMContentLoaded", function () {
         updateHero(i);
     });
 
+
+    // hero button wave
+    const video = document.querySelector('.hero-video-button>video')
+    const darkOuter = document.querySelector('.dark-outer')
+    const lighteOuter = document.querySelector('.light-outer')
+    const innerButton = document.querySelector('.inner-button')
+    const innerPlay = document.querySelector('.inner-play')
+
+    innerButton.addEventListener('mouseenter', function () {
+        setTimeout(() => {
+            innerButton.classList.add('active')
+            innerPlay.classList.add('active')
+            video.classList.add('active')
+            darkOuter.classList.add('active')
+            lighteOuter.classList.add('active')
+        }, 200)
+    })
+
+    innerButton.addEventListener('mouseleave', function () {
+        setTimeout(() => {
+            innerButton.classList.remove('active')
+            innerPlay.classList.remove('active')
+            video.classList.remove('active')
+            darkOuter.classList.remove('active')
+            lighteOuter.classList.remove('active')
+
+            // when mouseleave, the innerButton goes back to it's original position
+            innerButton.style.transform = 'translate(0px,0px)'
+        }, 200)
+    })
+
+    innerButton.addEventListener('mousemove', function (e) {
+        const rect = innerButton.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        
+        let x = e.clientX - centerX;
+        let y = e.clientY - centerY;
+
+        // Limit the movement range to -10 to 10 px
+        x = Math.max(Math.min(x, 10), -10);
+        y = Math.max(Math.min(y, 10), -10);
+
+        innerButton.style.transform = `translate(${x}px,${y}px)`
+    })
+
+
     // desinations section swiper
     const swiper = new Swiper('.swiper', {
         speed: 900,
@@ -173,7 +220,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-    //when mouse move on the swiper images
+    // when mouse move on the swiper images
     const swiperSlides = document.querySelectorAll('.swiper-slide');
     
     swiperSlides.forEach(slide => {
