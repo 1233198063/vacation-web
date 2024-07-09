@@ -245,5 +245,21 @@ document.addEventListener("DOMContentLoaded", function () {
             slideImg.style.transform = 'scale(1)';
         });
     });
+
+    //  benefits section drop down list
+    const dropdownBtn2 = document.getElementById("dropdown-button-two");
+    const dropdownList2 = document.getElementById("dropdown-list-two");
+    const dropdownArrow2 = document.getElementById("dropdown-arrow-two");
+
+    dropdownBtn2.addEventListener("click", function () {
+        if (dropdownList2.classList.contains("open")) {
+            dropdownList2.classList.remove("open");
+            dropdownArrow2.innerHTML = "stat_minus_1"; // arrow down
+        } else {
+            dropdownList2.classList.add("open");
+            dropdownArrow2.innerHTML = "stat_1"; // arrow up
+        }
+    });
+
 });
 

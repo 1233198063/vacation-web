@@ -1,4 +1,9 @@
 @vw: 19.20vw;
+@border-width: (10px / @vw);
+@padding-large: (500px / @vw);
+@padding-big: (300px / @vw);
+@padding-small: (200px / @vw);
+
 
 .preloader {
     position: fixed;
@@ -590,13 +595,10 @@
 }
 
 .dropdown-text {
-    /* color: white; */
     text-align: center;
 }
 
 .dropdown-icon span {
-    /* color: white; */
-    position: relative;
     vertical-align: middle;
 }
 
@@ -614,23 +616,23 @@
     opacity: 1;
     visibility: visible;
     display: flex;
-    margin-top: 12px;
+    margin-top: (500px / @vw);
     justify-content: flex-end;
 }
 
 .dropdown-container {
     display: grid;
-    min-height: 200px;
-    min-width: 500px;
-    padding: 24px;
+    min-height: (3800px / @vw);
+    min-width: (8600px / @vw);
+    padding: (380px / @vw);
     grid-auto-columns: 1fr;
-    grid-column-gap: 16px;
-    grid-row-gap: 18px;
+    grid-column-gap: (180px / @vw);
+    grid-row-gap: (160px / @vw);
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
-    border-radius: 12px;
+    border-radius: (120px / @vw);
     background-color: #fff;
-    box-shadow: 0 6px 48px -4px rgba(53, 64, 117, 0.1);
+    box-shadow: 0 (60px / @vw) (480px / @vw) (-40px / @vw) rgba(53, 64, 117, 0.1);
 }
 
 .dropdown-list-ul {
@@ -642,7 +644,7 @@
 
     a {
         text-decoration: none;
-        padding: 24px 18px 24px 24px;
+        padding: @padding-big @padding-small @padding-big @padding-big;
         overflow: hidden;
         position: relative;
         display: grid;
@@ -650,13 +652,13 @@
         height: 100%;
         align-content: center;
         grid-auto-columns: 1fr;
-        grid-column-gap: 16px;
+        grid-column-gap: (160px / @vw);
         grid-template-columns: 1fr auto;
         grid-template-rows: auto;
         border-style: solid;
-        border-width: 1px;
+        border-width: (10px / @vw);
         border-color: rgba(192, 192, 211, 0.2);
-        border-radius: 4px;
+        border-radius: (40px / @vw);
         background-image: none;
         color: #081c3a;
 
@@ -1212,7 +1214,9 @@
 
     .intro-wrapper{
         padding: (2800px / @vw) (1500px / @vw);
-        display: gird;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: (500px / @vw);
 
         .intro-content {
             display: flex;
@@ -1221,23 +1225,98 @@
             padding: (200px / @vw);
 
             h1{
-                margin:(700px / @vw) 0px;
+                margin:(400px / @vw) 0px;
             }
 
-            .button {
-                max-width: (6000px / @vw);
+            .benefits-text{
+                font-size: 600;
             }
 
-            .button:hover {
-                background-color: #081c3a;
+            .intro-dropdown-button {
+                margin-top: (400px / @vw);
+                position: relative;
+
+                .button {
+                    max-width: (6000px / @vw);
+                }
+    
+                .button:hover {
+                    background-color: #081c3a;
+                }
+                
+                .dropdown-list {
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity 0.8s ease, visibility 0.5s ease;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    z-index: 1000;
+                }
+                
+                .dropdown-list.open {
+                    opacity: 1;
+                    visibility: visible;
+                    display: flex;
+                    margin-top: (500px / @vw);
+                    justify-content: flex-start;
+                }
             }
+            
         }
 
         .intro-right-img {
             position: relative;
             overflow: hidden;
             width: 100%;
+            height: 100%;
             border-radius: 3px;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    @benefits-lines-color: rgba(192, 192, 211, 0.2);
+    .benefits-bottom {
+        padding: 0px (1500px / @vw) (2800px / @vw);
+
+        .benefits-box{
+            margin-top: (500px / @vw);
+            display: grid;
+            grid-template-columns: 1fr 1px 1fr 1px 1fr 1px 1fr;
+            border: @border-width solid @benefits-lines-color;
+            border-radius: (180px / @vw);
+            background-color: #fff;
+
+            .benefits-card {
+                padding: @padding-large;
+
+                .benefits-icon {
+                    width: (1000px / @vw);
+                    height: (1000px / @vw);
+                    padding: @padding-small;
+                    background-color: #f7f8fc;
+                    border: @border-width solid @benefits-lines-color;
+                    border-radius: 100%;
+
+                    span {
+                        display: inline-block;
+                        width: 100%;
+                        height: 100%;
+                        vertical-align: middle;
+                    }
+                }
+            }
+
+            .verticle-line {
+                position: relative;
+                height: 100%;
+                background-color: @benefits-lines-color;
+            }
         }
     }
 }

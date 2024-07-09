@@ -71,7 +71,7 @@ img {
     border-style: none;
     border-radius: 5px;
     background-color: #3572ff;
-    transition: all 400ms cubic-bezier(.25, .46, .45, .94);
+    transition: all 0.5s cubic-bezier(.25, .46, .45, .94);
     color: #fff;
     font-size: 10px;
     text-align: center;

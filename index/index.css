@@ -463,12 +463,9 @@
   transition: color 0.5s ease, opacity 0.5s ease;
 }
 .dropdown-text {
-  /* color: white; */
   text-align: center;
 }
 .dropdown-icon span {
-  /* color: white; */
-  position: relative;
   vertical-align: middle;
 }
 .dropdown-list {
@@ -484,22 +481,22 @@
   opacity: 1;
   visibility: visible;
   display: flex;
-  margin-top: 12px;
+  margin-top: 26.04166667px;
   justify-content: flex-end;
 }
 .dropdown-container {
   display: grid;
-  min-height: 200px;
-  min-width: 500px;
-  padding: 24px;
+  min-height: 197.91666667px;
+  min-width: 447.91666667px;
+  padding: 19.79166667px;
   grid-auto-columns: 1fr;
-  grid-column-gap: 16px;
-  grid-row-gap: 18px;
+  grid-column-gap: 9.375px;
+  grid-row-gap: 8.33333333px;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
-  border-radius: 12px;
+  border-radius: 6.25px;
   background-color: #fff;
-  box-shadow: 0 6px 48px -4px rgba(53, 64, 117, 0.1);
+  box-shadow: 0 3.125px 25px -2.08333333px rgba(53, 64, 117, 0.1);
 }
 .dropdown-list-ul {
   list-style: none;
@@ -510,20 +507,20 @@
 }
 .dropdown-list-ul a {
   text-decoration: none;
-  padding: 24px 18px 24px 24px;
+  padding: 15.625px 10.41666667px 15.625px 15.625px;
   position: relative;
   display: grid;
   overflow: hidden;
   height: 100%;
   align-content: center;
   grid-auto-columns: 1fr;
-  grid-column-gap: 16px;
+  grid-column-gap: 8.33333333px;
   grid-template-columns: 1fr auto;
   grid-template-rows: auto;
   border-style: solid;
-  border-width: 1px;
+  border-width: 0.52083333px;
   border-color: rgba(192, 192, 211, 0.2);
-  border-radius: 4px;
+  border-radius: 2.08333333px;
   background-image: none;
   color: #081c3a;
   background-size: 100%;
@@ -957,7 +954,9 @@
 }
 .benefits-section .intro-wrapper {
   padding: 145.83333333px 78.125px;
-  display: gird;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26.04166667px;
 }
 .benefits-section .intro-wrapper .intro-content {
   display: flex;
@@ -966,17 +965,79 @@
   padding: 10.41666667px;
 }
 .benefits-section .intro-wrapper .intro-content h1 {
-  margin: 36.45833333px 0px;
+  margin: 20.83333333px 0px;
 }
-.benefits-section .intro-wrapper .intro-content .button {
+.benefits-section .intro-wrapper .intro-content .benefits-text {
+  font-size: 600;
+}
+.benefits-section .intro-wrapper .intro-content .intro-dropdown-button {
+  margin-top: 20.83333333px;
+  position: relative;
+}
+.benefits-section .intro-wrapper .intro-content .intro-dropdown-button .button {
   max-width: 312.5px;
 }
-.benefits-section .intro-wrapper .intro-content .button:hover {
+.benefits-section .intro-wrapper .intro-content .intro-dropdown-button .button:hover {
   background-color: #081c3a;
+}
+.benefits-section .intro-wrapper .intro-content .intro-dropdown-button .dropdown-list {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease, visibility 0.5s ease;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+}
+.benefits-section .intro-wrapper .intro-content .intro-dropdown-button .dropdown-list.open {
+  opacity: 1;
+  visibility: visible;
+  display: flex;
+  margin-top: 26.04166667px;
+  justify-content: flex-start;
 }
 .benefits-section .intro-wrapper .intro-right-img {
   position: relative;
   overflow: hidden;
   width: 100%;
+  height: 100%;
   border-radius: 3px;
+}
+.benefits-section .intro-wrapper .intro-right-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.benefits-section .benefits-bottom {
+  padding: 0px 78.125px 145.83333333px;
+}
+.benefits-section .benefits-bottom .benefits-box {
+  margin-top: 26.04166667px;
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr 1px 1fr 1px 1fr;
+  border: 0.52083333px solid rgba(192, 192, 211, 0.2);
+  border-radius: 9.375px;
+  background-color: #fff;
+}
+.benefits-section .benefits-bottom .benefits-box .benefits-card {
+  padding: 26.04166667px;
+}
+.benefits-section .benefits-bottom .benefits-box .benefits-card .benefits-icon {
+  width: 52.08333333px;
+  height: 52.08333333px;
+  padding: 10.41666667px;
+  background-color: #f7f8fc;
+  border: 0.52083333px solid rgba(192, 192, 211, 0.2);
+  border-radius: 100%;
+}
+.benefits-section .benefits-bottom .benefits-box .benefits-card .benefits-icon span {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+.benefits-section .benefits-bottom .benefits-box .verticle-line {
+  position: relative;
+  height: 100%;
+  background-color: rgba(192, 192, 211, 0.2);
 }
