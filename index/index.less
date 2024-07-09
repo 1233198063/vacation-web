@@ -1281,6 +1281,7 @@
     }
 
     @benefits-lines-color: rgba(192, 192, 211, 0.2);
+    @shadow: rgba(192, 192, 211, 0.1);
     .benefits-bottom {
         padding: 0px (1500px / @vw) (2800px / @vw);
 
@@ -1294,8 +1295,17 @@
 
             .benefits-card {
                 padding: @padding-large;
+                display: grid;
+                grid-template-rows: 1fr 1fr auto;
+                gap: @padding-big;
+                align-items: end;
+                transition: all 0.5s;
 
                 .benefits-icon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
                     width: (1000px / @vw);
                     height: (1000px / @vw);
                     padding: @padding-small;
@@ -1304,12 +1314,17 @@
                     border-radius: 100%;
 
                     span {
-                        display: inline-block;
-                        width: 100%;
-                        height: 100%;
-                        vertical-align: middle;
+                        display: block;
                     }
                 }
+            }
+
+            .benefits-card:hover {
+                border-radius: (180px / @vw);
+                background-color: #fff;
+                transform: scale(1.1);
+                z-index: 1;
+                box-shadow: 0px @padding-small @padding-small @padding-small @shadow;
             }
 
             .verticle-line {
