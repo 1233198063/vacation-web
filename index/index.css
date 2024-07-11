@@ -1053,3 +1053,94 @@
   height: 100%;
   background-color: rgba(192, 192, 211, 0.2);
 }
+.testimonial-section {
+  background-image: url(../images/beach_cabin.jpeg);
+  overflow: hidden;
+  position: relative;
+  padding-top: 93.75px 0px;
+  padding-bottom: 119.79166667px;
+  width: 100%;
+}
+.testimonial-section .slider-wrapper {
+  position: relative;
+  margin-left: 78.125px;
+  z-index: 2;
+  display: grid;
+  column-gap: 26.04166667px;
+}
+.testimonial-section .slider-wrapper .testimonial-tracker {
+  grid-area: 1/1/5/2;
+  height: 100%;
+  background-color: aquamarine;
+  display: flex;
+}
+.testimonial-section .slider-wrapper .testimonial-tracker .scrollbar-track {
+  overflow: hidden;
+  height: 100%;
+  width: 2.60416667px;
+  background-color: red;
+  border-radius: 5.20833333px;
+}
+.testimonial-section .slider-wrapper .testimonial-tracker .scrollbar-track .scrollbar-fill {
+  width: 100%;
+  height: 20%;
+  border-radius: 5.20833333px;
+  background-color: #fff;
+}
+.testimonial-section .slider-wrapper .testimonial-tracker ul {
+  margin: 0 10.41666667px;
+  list-style: none;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  align-items: center;
+}
+.testimonial-section .slider-wrapper .testimonial-slides {
+  grid-area: 1/2/4/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.testimonial-section .slider-wrapper .buttons {
+  grid-area: 4/2/5/4;
+  position: relative;
+  left: 50%;
+  width: 151.04166667px;
+  height: 62.5px;
+  transform: translate(-50%);
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15.625px;
+}
+.testimonial-section .slider-wrapper .buttons .slide-button-next,
+.testimonial-section .slider-wrapper .buttons .slide-button-prev {
+  background-color: #ffffff;
+  width: 62.5px;
+  height: 62.5px;
+  border: solid 1px #efeff7;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.testimonial-section .slider-wrapper .buttons .slide-button-next::after {
+  content: '\e5c8';
+  font-family: 'Material Symbols Outlined';
+  color: #081c3a;
+  font-size: medium;
+}
+.testimonial-section .slider-wrapper .buttons .slide-button-prev::after {
+  content: '\e5c4';
+  font-family: 'Material Symbols Outlined';
+  color: #081c3a;
+  font-size: medium;
+}
+.testimonial-section .overlay {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  background-color: rgba(15, 19, 38, 0.55);
+}
