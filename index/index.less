@@ -1339,10 +1339,11 @@
 // testimonial section
 .testimonial-section {
     background-image: url(../images/beach_cabin.jpeg);
+    background-size: 100%;
     overflow: hidden;
     position: relative;
-    padding-top: (1800px / @vw) 0px;
-    padding-bottom: (2300px / @vw);
+    padding-top: (3500px / @vw);
+    padding-bottom: (5200px / @vw);
     width: 100%;
 
     .slider-wrapper{
@@ -1350,48 +1351,74 @@
         margin-left: (1500px / @vw);
         z-index: 2;
         display: grid;
-        column-gap: @padding-large;
+        row-gap: (800px / @vw);
 
         .testimonial-tracker {
             grid-area: 1/ 1/ 5/ 2;
 
             height: 100%;
-            background-color: aquamarine;
             display: flex;
 
             .scrollbar-track {
                 overflow: hidden;
                 height: 100%;
                 width: (50px / @vw);
-                background-color: red;
 
                 border-radius: (100px / @vw);
 
                 .scrollbar-fill{
+                    position: relative;
+                    top: 0%;
+
                     width: 100%;
                     height: 20%;
                     border-radius: (100px / @vw);
                     background-color: #fff;
+
+                    transition: top 1s ease;
                 }
             }
 
             ul {
-                margin: 0 @padding-small;
+                margin: 0 @padding-big;
                 list-style: none;
                 height: 100%;
 
                 display: grid;
                 grid-template-rows: repeat(5, 1fr);
                 align-items: center;
+
+                color:#fff;
             }
         }
 
-        .testimonial-slides {
+        .testimonial-slide {
             grid-area: 1/ 2/ 4/ 4;
 
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding: 0px (7200px/@vw);
+
+            color: #fff;
+            text-align: center;
+
+            .body-display {
+                font-size: (350px / @vw);
+                
+                line-height: 1.6em;
+                font-weight: 400;
+                transition: all 1s;
+            }
+
+            .testimonial-client {
+                font-size: (400px / @vw);
+                font-weight: 600;
+
+                margin-top: (600px / @vw);
+                transition: all 1s;
+            }
         }
 
         .buttons {
@@ -1446,4 +1473,58 @@
         bottom: 0%;
         background-color: rgba(15, 19, 38, 0.55);
     }
+}
+
+@gray-dot: #e6e6f3;
+@dark-dot: rgb(8, 28, 58);
+
+.vacations-section {
+    position: relative;
+
+    margin-left: (2000px / @vw);
+    margin-right: (1500px / @vw);
+    margin-top: -(1500px / @vw);
+
+    z-index: 1;
+
+    display: grid;
+    grid-template-rows: auto;
+    gap: @padding-big;
+
+    .subtitle-intro-wrapper {
+        display: flex;
+        flex-direction: row;
+
+        .subtitle {
+            color:#fff;
+        }
+    }
+
+    .popular-vacations {
+        background-color: #fff;
+        border-radius: (100px / @vw);
+        padding: (800px / @vw) ;
+
+        .vacations-tab-menu{
+            display: flex;
+            justify-content: space-around;
+
+            .tab-location {
+                display: grid;
+                grid-template-columns: auto;
+                gap: @padding-big;
+
+                .membership-circle{
+                    .membership-dot {
+                        background-color: @gray-dot;
+                    }
+
+                    .membership-outline-circle {
+                        border-radius: 100%;
+                    }
+                }
+            }
+        }
+    }
+
 }

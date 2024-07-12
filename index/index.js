@@ -262,5 +262,87 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     //testimonial slide
+    const testArr= [
+        {
+            text:'Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec ac neque. Sedvitae sollicitudin elit, ac tristique nisi. Pellentesque rutrum egestas massalacinia volutpat. Integer et facilisis elit, vitae lobortis enim.',
+            client: 'Samantha Vohnhale'
+        },
+        {
+            text:'Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec ac neque. Sedvitae sollicitudin elit, ac tristique nisi. Pellentesque rutrum egestas massalacinia volutpat. Integer et facilisis elit, vitae lobortis enim.',
+            client: 'Wilson Tomales'
+        },
+        {
+            text:'Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec ac neque. Sedvitae sollicitudin elit, ac tristique nisi. Pellentesque rutrum egestas massalacinia volutpat. Integer et facilisis elit, vitae lobortis enim.',
+            client: 'Samantha Vohnhale'
+        },
+        {
+            text:'Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec ac neque. Sedvitae sollicitudin elit, ac tristique nisi. Pellentesque rutrum egestas massalacinia volutpat. Integer et facilisis elit, vitae lobortis enim.',
+            client: 'Tammy Georgeon'
+        },
+        {
+            text:'Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec ac neque. Sedvitae sollicitudin elit, ac tristique nisi. Pellentesque rutrum egestas massalacinia volutpat. Integer et facilisis elit, vitae lobortis enim.',
+            client: 'Emily Camphon'
+        }
+    ];
+
+    //test for testimonial
+    const testNext = document.querySelector('.slide-button-next');
+    const testPrev = document.querySelector('.slide-button-prev');
+    const testText = document.querySelector('.testimonial-slide .body-display');
+    const testClient = document.querySelector('.testimonial-slide .testimonial-client');
+    const scrollbarFill = document.querySelector('.scrollbar-fill');
+
+    let testIndex = 0;
+
+    function updateTest(index) {
+        
+        testText.style.opacity= 0;
+        testText.style.transform= 'translateY(20px) scale(0.6)';
+
+        testClient.style.opacity= 0;
+        testClient.style.transform= 'translateY(20px) scale(0.8)';
+
+        // Wait for the fade out and transform transition
+        setTimeout(() => {
+            testText.textContent = testArr[index].text;
+            testClient.textContent = testArr[index].client;
+            testText.style.opacity= 1;
+            testText.style.transform= 'translateY(0px) scale(1)';
+
+            testClient.style.opacity= 1;
+            testClient.style.transform= 'translateY(0px) scale(1)';
+        }, 800);
+    }
+
+    function updateScrollbar() {
+        scrollbarFill.style.top = `${topPercentage}%`;
+    }
+    
+    updateTest(testIndex);  // Initialize the content
+
+    testNext.addEventListener('click', () => {
+        testIndex++;
+        if (testIndex > testArr.length - 1) {
+            testIndex = 0;
+            topPercentage =0;
+        } else {
+            topPercentage += 20;
+        }
+        updateTest(testIndex);
+        updateScrollbar();
+    });
+    
+    testPrev.addEventListener('click', () => {
+        testIndex--;
+        if (testIndex < 0) {
+            testIndex = testArr.length - 1;
+            topPercentage = 80;
+        } else {
+            topPercentage -= 20;
+        }
+        updateTest(testIndex);
+        updateScrollbar();
+    });
+    
 });
 
