@@ -202,13 +202,6 @@
 .menu-heading {
   padding-left: 80px;
 }
-.subtitle {
-  font-size: 11px;
-  line-height: 1.4em;
-  font-weight: 400;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
 .continent-list,
 .destination-list,
 .contact-list {
@@ -1055,7 +1048,7 @@
 }
 .testimonial-section {
   background-image: url(../images/beach_cabin.jpeg);
-  background-size: 100%;
+  background-size: cover;
   overflow: hidden;
   position: relative;
   padding-top: 182.29166667px;
@@ -1065,6 +1058,7 @@
 .testimonial-section .slider-wrapper {
   position: relative;
   margin-left: 78.125px;
+  padding-right: 260.41666667px;
   z-index: 2;
   display: grid;
   row-gap: 41.66666667px;
@@ -1099,12 +1093,11 @@
   color: #fff;
 }
 .testimonial-section .slider-wrapper .testimonial-slide {
-  grid-area: 1/2/4/4;
+  grid-area: 1/2/4/5;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0px 375px;
   color: #fff;
   text-align: center;
 }
@@ -1113,6 +1106,7 @@
   line-height: 1.6em;
   font-weight: 400;
   transition: all 1s;
+  max-width: 520.83333333px;
 }
 .testimonial-section .slider-wrapper .testimonial-slide .testimonial-client {
   font-size: 20.83333333px;
@@ -1121,7 +1115,7 @@
   transition: all 1s;
 }
 .testimonial-section .slider-wrapper .buttons {
-  grid-area: 4/2/5/4;
+  grid-area: 4/2/5/5;
   position: relative;
   left: 50%;
   width: 151.04166667px;
@@ -1199,4 +1193,69 @@
 }
 .vacations-section .popular-vacations .vacations-tab-menu .tab-location .membership-circle .membership-outline-circle {
   border-radius: 100%;
+}
+.vacations-section .popular-vacations .vacations-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 26.04166667px;
+}
+.vacations-section .popular-vacations .vacations-cards .vacations-card {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  row-gap: 26.04166667px;
+  padding: 15.625px;
+  border: 0.52083333px solid #e6e6f3;
+  border-radius: 10.41666667px;
+  transition: all 0.5s ease;
+}
+.vacations-section .popular-vacations .vacations-cards .vacations-card .card-img {
+  position: relative;
+  height: 100%;
+  min-height: 234.375px;
+  border-radius: 10.41666667px;
+  background-color: #516381;
+}
+.vacations-section .popular-vacations .vacations-cards .vacations-card .card-info {
+  padding-bottom: 15.625px;
+}
+.vacations-section .popular-vacations .vacations-cards .vacations-card .card-info h3 {
+  padding-bottom: 15.625px;
+}
+.vacations-section .popular-vacations .vacations-cards .vacations-card .card-info p {
+  color: #516381;
+}
+.vacations-section .popular-vacations .vacations-cards .vacations-card .card-details {
+  border-top: 0.52083333px solid #e6e6f3;
+  padding-top: 15.625px;
+  display: flex;
+  justify-content: space-between;
+}
+.vacations-section .popular-vacations .vacations-cards .vacations-card .card-details .vacation-price {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.vacations-section .popular-vacations .vacations-cards .vacations-card .card-details .vacation-price .subtitle.small {
+  font-size: 6.77083333px;
+  letter-spacing: 2.08333333px;
+}
+.vacations-section .popular-vacations .vacations-cards .vacations-card .card-details .vacation-price .dynamic-price {
+  display: flex;
+}
+.vacations-section .popular-vacations .vacations-cards .vacations-card .card-details .button {
+  padding: 6.25px 15.625px;
+  border-radius: 2.60416667px;
+  font-size: 10.41666667px;
+  letter-spacing: 1.5625px;
+  border: 0.52083333px solid #e6e6f3;
+}
+.vacations-section .popular-vacations .vacations-cards .vacations-card .card-details .button:hover {
+  background-color: #081c3a;
+  color: #fff;
+}
+.vacations-section .popular-vacations .vacations-cards .vacations-card:hover {
+  border: none;
+  background-color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0px 5.20833333px 5.20833333px 5.20833333px rgba(192, 192, 211, 0.3);
 }

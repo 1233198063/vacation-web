@@ -346,3 +346,54 @@ document.addEventListener("DOMContentLoaded", function () {
     
 });
 
+//vacations cards
+const cardsArr= [
+    {
+        img1:'./images/607dd011e021d45c28b27a10_021.jpeg',
+        img2:'./images/607dd011e021d4d191b27a11_022.jpeg',
+        img3:'.images/607dd02d03615176c83d10e5_024.jpeg',
+        location1:'Bahariya Oasis',
+        location2:'Sahl Hasheesh',
+        location3:'Alexandria',
+        price1:'6400',
+        price2:'7700',
+        price3:'5300',
+        link:'',
+    },
+    {
+        img1:'./images/607dd011e021d45c28b27a10_021.jpeg',
+        img2:'./images/607dd011e021d4d191b27a11_022.jpeg',
+        img3:'.images/607dd02d03615176c83d10e5_024.jpeg',
+        location1:'Bahariya Oasis',
+        location2:'Sahl Hasheesh',
+        location3:'Alexandria',
+        price1:'6400',
+        price2:'7700',
+        price3:'5300',
+        link:'',
+    },
+    {
+        img1:'./images/607dd011e021d45c28b27a10_021.jpeg',
+        img2:'./images/607dd011e021d4d191b27a11_022.jpeg',
+        img3:'.images/607dd02d03615176c83d10e5_024.jpeg',
+        location1:'Bahariya Oasis',
+        location2:'Sahl Hasheesh',
+        location3:'Alexandria',
+        price1:'6400',
+        price2:'7700',
+        price3:'5300',
+        link:'',
+    },
+    {
+        img1:'./images/607dd011e021d45c28b27a10_021.jpeg',
+        img2:'./images/607dd011e021d4d191b27a11_022.jpeg',
+        img3:'.images/607dd02d03615176c83d10e5_024.jpeg',
+        location1:'Bahariya Oasis',
+        location2:'Sahl Hasheesh',
+        location3:'Alexandria',
+        price1:'6400',
+        price2:'7700',
+        price3:'5300',
+        link:'',
+    }
+];

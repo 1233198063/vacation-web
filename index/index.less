@@ -3,6 +3,8 @@
 @padding-large: (500px / @vw);
 @padding-big: (300px / @vw);
 @padding-small: (200px / @vw);
+@padding-mini: (100px / @vw);
+@shadow: rgba(192, 192, 211, 0.1);
 
 
 .preloader {
@@ -263,14 +265,6 @@
 
 .menu-heading {
     padding-left: 80px;
-}
-
-.subtitle {
-    font-size: 11px;
-    line-height: 1.4em;
-    font-weight: 400;
-    letter-spacing: 3px;
-    text-transform: uppercase;
 }
 
 .continent-list,
@@ -1281,7 +1275,7 @@
     }
 
     @benefits-lines-color: rgba(192, 192, 211, 0.2);
-    @shadow: rgba(192, 192, 211, 0.1);
+    
     .benefits-bottom {
         padding: 0px (1500px / @vw) (2800px / @vw);
 
@@ -1339,7 +1333,7 @@
 // testimonial section
 .testimonial-section {
     background-image: url(../images/beach_cabin.jpeg);
-    background-size: 100%;
+    background-size: cover;
     overflow: hidden;
     position: relative;
     padding-top: (3500px / @vw);
@@ -1349,7 +1343,10 @@
     .slider-wrapper{
         position: relative;
         margin-left: (1500px / @vw);
+        padding-right: (5000px / @vw);
+
         z-index: 2;
+
         display: grid;
         row-gap: (800px / @vw);
 
@@ -1393,13 +1390,12 @@
         }
 
         .testimonial-slide {
-            grid-area: 1/ 2/ 4/ 4;
+            grid-area: 1/ 2/ 4/ 5;
 
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 0px (7200px/@vw);
 
             color: #fff;
             text-align: center;
@@ -1410,6 +1406,8 @@
                 line-height: 1.6em;
                 font-weight: 400;
                 transition: all 1s;
+
+                max-width: (10000px / @vw);
             }
 
             .testimonial-client {
@@ -1422,7 +1420,7 @@
         }
 
         .buttons {
-            grid-area: 4/ 2/ 5/ 4;
+            grid-area: 4/ 2/ 5/ 5;
 
             position: relative;
             left: 50%;
@@ -1465,6 +1463,7 @@
         }
     }
 
+    //a dark layer on the background
     .overlay {
         position: absolute;
         left: 0%;
@@ -1475,6 +1474,8 @@
     }
 }
 
+
+// vacations section
 @gray-dot: #e6e6f3;
 @dark-dot: rgb(8, 28, 58);
 
@@ -1523,6 +1524,94 @@
                         border-radius: 100%;
                     }
                 }
+            }
+        }
+
+
+        .vacations-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: (500px / @vw);
+
+            .vacations-card{
+                display: grid;
+                grid-template-rows: 1fr auto;
+                row-gap: (500px / @vw);
+
+                padding: (300px / @vw);
+                border: (10px / @vw) solid @gray-dot;
+                border-radius: (200px / @vw);
+
+                transition: all 0.5s ease;
+
+                .card-img {
+                    position: relative;
+                    height: 100%;
+
+                    min-height: (4500px / @vw);
+
+                    border-radius: (200px / @vw);
+                    background-color: #516381;
+
+
+                }
+
+                .card-info {
+                    padding-bottom: @padding-big;
+
+                    h3 {
+                        padding-bottom: @padding-big;
+                    }
+
+                    p {
+                        color: #516381;
+                    }
+                }
+
+                .card-details{
+                    border-top: (10px / @vw) solid @gray-dot;
+                    padding-top: @padding-big;
+
+                    display: flex;
+                    justify-content: space-between;
+
+                    .vacation-price {
+                        display: flex;
+                        flex-direction: column;
+                        align-content: center;
+
+                        .subtitle.small {
+                            font-size: (130px / @vw);
+                            letter-spacing: (40px / @vw);
+                        }
+
+                        .dynamic-price {
+                            display: flex;
+                        }
+                    }
+
+                    .button {
+                        padding: (120px / @vw) (300px / @vw);
+                        border-radius: (50px / @vw);
+                        
+                        font-size: (200px / @vw);
+                        
+                        letter-spacing: (30px / @vw);
+                        border: (10px / @vw) solid @gray-dot;
+                    }
+
+                    .button:hover {
+                        background-color: #081c3a;
+                        color: #fff;
+                    }
+                }
+            }
+
+            .vacations-card:hover {
+                border: none;
+                background-color: #fff;
+                transform: scale(1.05);
+                box-shadow: 0px @padding-mini @padding-mini @padding-mini rgba(192, 192, 211, 0.3);
             }
         }
     }
