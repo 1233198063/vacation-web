@@ -1541,8 +1541,9 @@
                 padding: (300px / @vw);
                 border: (10px / @vw) solid @gray-dot;
                 border-radius: (200px / @vw);
+                background-color: #fff;
 
-                transition: all 0.5s ease;
+                transition: transform 0.5s ease;
 
                 .card-img {
                     position: relative;
@@ -1553,7 +1554,14 @@
                     border-radius: (200px / @vw);
                     background-color: #516381;
 
+                    overflow: hidden;
 
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        vertical-align: middle;
+                        transition: all 0.5s;
+                    }
                 }
 
                 .card-info {
@@ -1609,9 +1617,12 @@
 
             .vacations-card:hover {
                 border: none;
-                background-color: #fff;
                 transform: scale(1.05);
                 box-shadow: 0px @padding-mini @padding-mini @padding-mini rgba(192, 192, 211, 0.3);
+            }
+
+            .vacations-card:hover .card-img img {
+                transform: scale(1.1);
             }
         }
     }
