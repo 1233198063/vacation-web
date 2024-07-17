@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         //left-side-indicator-scroll
         const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        
+
         // indicator-wrapper's height
         const wrapperHeight = indicatorWrapper.clientHeight - indicator.clientHeight;
 
@@ -99,24 +99,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // hero background image slider
-    const heroArr= [
+    const heroArr = [
         {
-            img:'./images/607dcd3355581e17e093caed_011.jpeg',
-            location:'Thessaloniki, Greece',
+            img: './images/607dcd3355581e17e093caed_011.jpeg',
+            location: 'Thessaloniki, Greece',
             details: 'starting at $ 6700'
         },
         {
-            img:'./images/607dd011e021d45c28b27a10_021.jpeg',
-            location:'Bahariya Oasis, Egypt',
+            img: './images/607dd011e021d45c28b27a10_021.jpeg',
+            location: 'Bahariya Oasis, Egypt',
             details: 'starting at $ 6400'
         },
         {
-            img:'./images/607dcd2961c3e396968aac28_031.jpeg',
-            location:'Denpasar, Indonesia',
+            img: './images/607dcd2961c3e396968aac28_031.jpeg',
+            location: 'Denpasar, Indonesia',
             details: 'starting at $ 1900'
         }
     ];
-    
+
     const heroNext = document.querySelector('.hero-slider-arrow.right');
     const heroPrev = document.querySelector('.hero-slider-arrow.left');
     const heroBg = document.querySelector('.slider-bg');
@@ -128,18 +128,18 @@ document.addEventListener("DOMContentLoaded", function () {
     function updateHero(index) {
         // Fade out effect
         heroBg.style.opacity = '0.9';
-        
+
         // Wait for the fade out transition to complete before updating the content and fading in
         setTimeout(() => {
             heroBg.style.backgroundImage = `url(${heroArr[index].img})`;
             heroLocation.textContent = heroArr[index].location;
             locationDetails.textContent = heroArr[index].details;
             heroBg.style.opacity = '1';
-        }, 300); 
+        }, 300);
     }
-    
+
     updateHero(i);  // Initialize the content
-    
+
     heroNext.addEventListener('click', () => {
         i++;
         if (i > heroArr.length - 1) {
@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         updateHero(i);
     });
-    
+
     heroPrev.addEventListener('click', () => {
         i--;
         if (i < 0) {
@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const rect = innerButton.getBoundingClientRect();
         const centerX = rect.left + rect.width / 2;
         const centerY = rect.top + rect.height / 2;
-        
+
         let x = e.clientX - centerX;
         let y = e.clientY - centerY;
 
@@ -211,18 +211,18 @@ document.addEventListener("DOMContentLoaded", function () {
         spaceBetween: 80,
         allowTouchMove: true,
         centeredSlides: true,
-      
+
         // Navigation arrows
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         },
 
     });
 
     // when mouse move on the swiper images
     const swiperSlides = document.querySelectorAll('.swiper-slide');
-    
+
     swiperSlides.forEach(slide => {
         const layer = slide.querySelector('.gradient-overlay');
         const slideImg = slide.querySelector('img');
@@ -241,7 +241,7 @@ document.addEventListener("DOMContentLoaded", function () {
             slideImg.style.transform = `scale(1.1) translate(${moveX}px, ${moveY}px)`;
         });
 
-        layer.addEventListener('mouseout', function() {
+        layer.addEventListener('mouseout', function () {
             slideImg.style.transform = 'scale(1)';
         });
     });
@@ -262,25 +262,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     //testimonial slide
-    const testArr= [
+    const testArr = [
         {
-            text:'Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec ac neque. Sedvitae sollicitudin elit, ac tristique nisi. Pellentesque rutrum egestas massalacinia volutpat. Integer et facilisis elit, vitae lobortis enim.',
+            text: 'Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec ac neque. Sedvitae sollicitudin elit, ac tristique nisi. Pellentesque rutrum egestas massalacinia volutpat. Integer et facilisis elit, vitae lobortis enim.',
             client: 'Samantha Vohnhale'
         },
         {
-            text:'Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec ac neque. Sedvitae sollicitudin elit, ac tristique nisi. Pellentesque rutrum egestas massalacinia volutpat. Integer et facilisis elit, vitae lobortis enim.',
+            text: 'Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec ac neque. Sedvitae sollicitudin elit, ac tristique nisi. Pellentesque rutrum egestas massalacinia volutpat. Integer et facilisis elit, vitae lobortis enim.',
             client: 'Wilson Tomales'
         },
         {
-            text:'Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec ac neque. Sedvitae sollicitudin elit, ac tristique nisi. Pellentesque rutrum egestas massalacinia volutpat. Integer et facilisis elit, vitae lobortis enim.',
+            text: 'Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec ac neque. Sedvitae sollicitudin elit, ac tristique nisi. Pellentesque rutrum egestas massalacinia volutpat. Integer et facilisis elit, vitae lobortis enim.',
             client: 'Samantha Vohnhale'
         },
         {
-            text:'Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec ac neque. Sedvitae sollicitudin elit, ac tristique nisi. Pellentesque rutrum egestas massalacinia volutpat. Integer et facilisis elit, vitae lobortis enim.',
+            text: 'Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec ac neque. Sedvitae sollicitudin elit, ac tristique nisi. Pellentesque rutrum egestas massalacinia volutpat. Integer et facilisis elit, vitae lobortis enim.',
             client: 'Tammy Georgeon'
         },
         {
-            text:'Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec ac neque. Sedvitae sollicitudin elit, ac tristique nisi. Pellentesque rutrum egestas massalacinia volutpat. Integer et facilisis elit, vitae lobortis enim.',
+            text: 'Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec ac neque. Sedvitae sollicitudin elit, ac tristique nisi. Pellentesque rutrum egestas massalacinia volutpat. Integer et facilisis elit, vitae lobortis enim.',
             client: 'Emily Camphon'
         }
     ];
@@ -295,43 +295,44 @@ document.addEventListener("DOMContentLoaded", function () {
     let testIndex = 0;
 
     function updateTest(index) {
-        
-        testText.style.opacity= 0;
-        testText.style.transform= 'translateY(20px) scale(0.6)';
 
-        testClient.style.opacity= 0;
-        testClient.style.transform= 'translateY(20px) scale(0.8)';
+        testText.style.opacity = 0;
+        testText.style.transform = 'translateY(20px) scale(0.6)';
+
+        testClient.style.opacity = 0;
+        testClient.style.transform = 'translateY(20px) scale(0.8)';
 
         // Wait for the fade out and transform transition
         setTimeout(() => {
             testText.textContent = testArr[index].text;
             testClient.textContent = testArr[index].client;
-            testText.style.opacity= 1;
-            testText.style.transform= 'translateY(0px) scale(1)';
+            testText.style.opacity = 1;
+            testText.style.transform = 'translateY(0px) scale(1)';
 
-            testClient.style.opacity= 1;
-            testClient.style.transform= 'translateY(0px) scale(1)';
+            testClient.style.opacity = 1;
+            testClient.style.transform = 'translateY(0px) scale(1)';
         }, 800);
     }
 
     function updateScrollbar() {
         scrollbarFill.style.top = `${topPercentage}%`;
     }
-    
+
     updateTest(testIndex);  // Initialize the content
 
+    let topPercentage = 0;
     testNext.addEventListener('click', () => {
         testIndex++;
         if (testIndex > testArr.length - 1) {
             testIndex = 0;
-            topPercentage =0;
+            topPercentage = 0;
         } else {
             topPercentage += 20;
         }
         updateTest(testIndex);
         updateScrollbar();
     });
-    
+
     testPrev.addEventListener('click', () => {
         testIndex--;
         if (testIndex < 0) {
@@ -343,57 +344,32 @@ document.addEventListener("DOMContentLoaded", function () {
         updateTest(testIndex);
         updateScrollbar();
     });
-    
+
+    //vacations cards
+    const tabmenu = document.querySelector('.vacations-tab-menu')
+    const targets = document.querySelectorAll('.vacations-tab-menu .tab-location')
+    const locationFill = document.querySelector('.vacations-tab-menu .location-indicator-fill')
+    const cards = document.querySelectorAll('.vacations-cards')
+
+    tabmenu.addEventListener('click', function (e) {
+        console.log(e.target);
+        // remove all the selected and active class
+        for (let i = 0; i < targets.length; i++) {
+            targets[i].classList.remove("selected")
+            targets[i].classList.remove('active')
+            cards[i].classList.remove('active')
+        }
+        const cardsIndex = e.target.dataset.index;
+        console.log(targets[cardsIndex]);
+        // add selected to a, circle become bigger
+        targets[cardsIndex].classList.add('selected')
+        // add active to a, dot become black
+        targets[cardsIndex].classList.add('active')
+        // set the width of indicator
+        locationFill.style.width = (+cardsIndex + 1) * 25 + '%'
+        // change cards
+        cards[cardsIndex].classList.add('active')
+    })
+
 });
 
-//vacations cards
-const cardsArr= [
-    {
-        img1:'./images/607dd011e021d45c28b27a10_021.jpeg',
-        img2:'./images/607dd011e021d4d191b27a11_022.jpeg',
-        img3:'.images/607dd02d03615176c83d10e5_024.jpeg',
-        location1:'Bahariya Oasis',
-        location2:'Sahl Hasheesh',
-        location3:'Alexandria',
-        price1:'6400',
-        price2:'7700',
-        price3:'5300',
-        link:'',
-    },
-    {
-        img1:'./images/607dd011e021d45c28b27a10_021.jpeg',
-        img2:'./images/607dd011e021d4d191b27a11_022.jpeg',
-        img3:'.images/607dd02d03615176c83d10e5_024.jpeg',
-        location1:'Bahariya Oasis',
-        location2:'Sahl Hasheesh',
-        location3:'Alexandria',
-        price1:'6400',
-        price2:'7700',
-        price3:'5300',
-        link:'',
-    },
-    {
-        img1:'./images/607dd011e021d45c28b27a10_021.jpeg',
-        img2:'./images/607dd011e021d4d191b27a11_022.jpeg',
-        img3:'.images/607dd02d03615176c83d10e5_024.jpeg',
-        location1:'Bahariya Oasis',
-        location2:'Sahl Hasheesh',
-        location3:'Alexandria',
-        price1:'6400',
-        price2:'7700',
-        price3:'5300',
-        link:'',
-    },
-    {
-        img1:'./images/607dd011e021d45c28b27a10_021.jpeg',
-        img2:'./images/607dd011e021d4d191b27a11_022.jpeg',
-        img3:'.images/607dd02d03615176c83d10e5_024.jpeg',
-        location1:'Bahariya Oasis',
-        location2:'Sahl Hasheesh',
-        location3:'Alexandria',
-        price1:'6400',
-        price2:'7700',
-        price3:'5300',
-        link:'',
-    }
-];

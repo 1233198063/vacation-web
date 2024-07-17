@@ -1182,22 +1182,74 @@
 .vacations-section .popular-vacations .vacations-tab-menu {
   display: flex;
   justify-content: space-around;
+  position: relative;
+  margin-bottom: 62.5px;
 }
 .vacations-section .popular-vacations .vacations-tab-menu .tab-location {
   display: grid;
   grid-template-columns: auto;
+  grid-template-rows: 1fr 1fr;
   gap: 15.625px;
+  position: relative;
+}
+.vacations-section .popular-vacations .vacations-tab-menu .tab-location .membership-circle {
+  width: 26.04166667px;
+  height: 26.04166667px;
+  position: absolute;
+  bottom: -13.02083333px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
 }
 .vacations-section .popular-vacations .vacations-tab-menu .tab-location .membership-circle .membership-dot {
+  width: 13.02083333px;
+  height: 13.02083333px;
   background-color: #e6e6f3;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 8;
 }
 .vacations-section .popular-vacations .vacations-tab-menu .tab-location .membership-circle .membership-outline-circle {
-  border-radius: 100%;
+  width: 13.02083333px;
+  height: 13.02083333px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  border: 0.52083333px solid #e6e6f3;
+  background-color: #fff;
+  transition: all 2s;
+  transform: translate(-50%, -50%) scale(1, 1);
+}
+.vacations-section .popular-vacations .vacations-tab-menu .tab-location.active .membership-dot {
+  background-color: #081c3a;
+}
+.vacations-section .popular-vacations .vacations-tab-menu .tab-location.selected .membership-outline-circle {
+  border: 0.52083333px solid #081c3a;
+  transform: translate(-50%, -50%) scale(3, 3);
+}
+.vacations-section .popular-vacations .vacations-tab-menu .location-indicator {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1.04166667px;
+  background-color: #e6e6f3;
+  z-index: 0;
+}
+.vacations-section .popular-vacations .vacations-tab-menu .location-indicator-fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 25%;
+  height: 1.04166667px;
+  background-color: #081c3a;
+  transition: width 2s ease;
 }
 .vacations-section .popular-vacations .vacations-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 26.04166667px;
+  display: none;
 }
 .vacations-section .popular-vacations .vacations-cards .vacations-card {
   display: grid;
@@ -1268,4 +1320,9 @@
 }
 .vacations-section .popular-vacations .vacations-cards .vacations-card:hover .card-img img {
   transform: scale(1.1);
+}
+.vacations-section .popular-vacations .vacations-cards.active {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 26.04166667px;
 }
