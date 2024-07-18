@@ -1,5 +1,5 @@
 @vw: 19.20vw;
-@border-width: (10px / @vw);
+@border-width: (8px / @vw);
 @padding-large: (500px / @vw);
 @padding-big: (300px / @vw);
 @padding-small: (200px / @vw);
@@ -1605,6 +1605,7 @@
         .vacations-box {
             position: relative;
             height: (9000px / @vw);
+            margin-bottom: (2000px / @vw);
 
             .vacations-cards {
                 position: absolute;
@@ -1725,5 +1726,78 @@
             }
         }
     }
+}
 
+//promise section
+.promise-section {
+    height: (12000px / @vw);
+    margin-left: (1500px / @vw);
+
+    background-image: url(../images/607dcd2961c3e396968aac28_031.jpeg);
+    background-size: cover;
+
+    position: relative;
+
+    .container {
+        // background-image: url(../images/607dcd2961c3e396968aac28_031.jpeg);
+        // background-size: cover;
+
+        position: relative;
+        z-index: 1;
+
+        display: grid;
+        grid-template-rows: 1fr auto;
+        row-gap: @padding-large;
+        justify-content: center;
+        justify-items: center;
+
+        padding: (3500px / @vw) 0px;
+
+        .text {
+            // position: relative;
+            // z-index: 1;
+            max-width: (15000px / @vw);
+            text-align: center;
+
+            .subtitle {
+                color: #fff;
+                margin-bottom: @padding-big;
+            }
+
+            h1{
+                color: #fff;
+            }
+        }
+
+        .buttons {
+            // position: relative;
+            // z-index: 1;
+            display: flex;
+
+            .button {
+                width: (3500px / @vw);
+                height: (900px / @vw);
+                letter-spacing: (20px / @vw);
+            }
+
+            .button.works{
+                background-color: transparent;
+                border: #fff @border-width solid;
+                font-weight: 600;
+                margin-left: @padding-small;
+            }
+        }
+
+        
+    }
+
+    .overlay {
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        right: 0%;
+        bottom: 0%;
+        background-color: rgba(15, 19, 38, 0.55);
+        z-index: 0;
+    }
 }

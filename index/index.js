@@ -371,5 +371,20 @@ document.addEventListener("DOMContentLoaded", function () {
         cards[cardsIndex].classList.add('active')
     })
 
+    // promise section
+    layer.addEventListener('mousemove', (e) => {
+        const rect = layer.getBoundingClientRect();
+        const mouseX = e.clientX - rect.left;
+        const mouseY = e.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const moveX = (centerX - mouseX) / 50;
+        const moveY = (centerY - mouseY) / 50;
+
+        slideImg.style.transform = `scale(1.1) translate(${moveX}px, ${moveY}px)`;
+    });
+
 });
 
