@@ -1235,7 +1235,7 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 1.04166667px;
+  height: 1.5625px;
   background-color: #e6e6f3;
   z-index: 0;
 }
@@ -1244,14 +1244,28 @@
   bottom: 0;
   left: 0;
   width: 25%;
-  height: 1.04166667px;
+  height: 1.5625px;
   background-color: #081c3a;
   transition: width 2s ease;
 }
-.vacations-section .popular-vacations .vacations-cards {
-  display: none;
+.vacations-section .popular-vacations .vacations-box {
+  position: relative;
+  height: 468.75px;
 }
-.vacations-section .popular-vacations .vacations-cards .vacations-card {
+.vacations-section .popular-vacations .vacations-box .vacations-cards {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.8, 0.8);
+  transition: all 2s;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 26.04166667px;
+}
+.vacations-section .popular-vacations .vacations-box .vacations-cards .vacations-card {
   display: grid;
   grid-template-rows: 1fr auto;
   row-gap: 26.04166667px;
@@ -1261,7 +1275,7 @@
   background-color: #fff;
   transition: transform 0.5s ease;
 }
-.vacations-section .popular-vacations .vacations-cards .vacations-card .card-img {
+.vacations-section .popular-vacations .vacations-box .vacations-cards .vacations-card .card-img {
   position: relative;
   height: 100%;
   min-height: 234.375px;
@@ -1269,60 +1283,63 @@
   background-color: #516381;
   overflow: hidden;
 }
-.vacations-section .popular-vacations .vacations-cards .vacations-card .card-img img {
+.vacations-section .popular-vacations .vacations-box .vacations-cards .vacations-card .card-img img {
   width: 100%;
   height: 100%;
   vertical-align: middle;
   transition: all 0.5s;
 }
-.vacations-section .popular-vacations .vacations-cards .vacations-card .card-info {
+.vacations-section .popular-vacations .vacations-box .vacations-cards .vacations-card .card-info {
   padding-bottom: 15.625px;
 }
-.vacations-section .popular-vacations .vacations-cards .vacations-card .card-info h3 {
+.vacations-section .popular-vacations .vacations-box .vacations-cards .vacations-card .card-info h3 {
   padding-bottom: 15.625px;
 }
-.vacations-section .popular-vacations .vacations-cards .vacations-card .card-info p {
+.vacations-section .popular-vacations .vacations-box .vacations-cards .vacations-card .card-info p {
   color: #516381;
 }
-.vacations-section .popular-vacations .vacations-cards .vacations-card .card-details {
+.vacations-section .popular-vacations .vacations-box .vacations-cards .vacations-card .card-details {
   border-top: 0.52083333px solid #e6e6f3;
   padding-top: 15.625px;
   display: flex;
   justify-content: space-between;
 }
-.vacations-section .popular-vacations .vacations-cards .vacations-card .card-details .vacation-price {
+.vacations-section .popular-vacations .vacations-box .vacations-cards .vacations-card .card-details .vacation-price {
   display: flex;
   flex-direction: column;
   align-content: center;
 }
-.vacations-section .popular-vacations .vacations-cards .vacations-card .card-details .vacation-price .subtitle.small {
+.vacations-section .popular-vacations .vacations-box .vacations-cards .vacations-card .card-details .vacation-price .subtitle.small {
   font-size: 6.77083333px;
   letter-spacing: 2.08333333px;
 }
-.vacations-section .popular-vacations .vacations-cards .vacations-card .card-details .vacation-price .dynamic-price {
+.vacations-section .popular-vacations .vacations-box .vacations-cards .vacations-card .card-details .vacation-price .dynamic-price {
   display: flex;
 }
-.vacations-section .popular-vacations .vacations-cards .vacations-card .card-details .button {
+.vacations-section .popular-vacations .vacations-box .vacations-cards .vacations-card .card-details .button {
   padding: 6.25px 15.625px;
   border-radius: 2.60416667px;
   font-size: 10.41666667px;
   letter-spacing: 1.5625px;
   border: 0.52083333px solid #e6e6f3;
 }
-.vacations-section .popular-vacations .vacations-cards .vacations-card .card-details .button:hover {
+.vacations-section .popular-vacations .vacations-box .vacations-cards .vacations-card .card-details .button:hover {
   background-color: #081c3a;
   color: #fff;
 }
-.vacations-section .popular-vacations .vacations-cards .vacations-card:hover {
+.vacations-section .popular-vacations .vacations-box .vacations-cards .vacations-card:hover {
   border: none;
   transform: scale(1.05);
   box-shadow: 0px 5.20833333px 5.20833333px 5.20833333px rgba(192, 192, 211, 0.3);
 }
-.vacations-section .popular-vacations .vacations-cards .vacations-card:hover .card-img img {
+.vacations-section .popular-vacations .vacations-box .vacations-cards .vacations-card:hover .card-img img {
   transform: scale(1.1);
 }
-.vacations-section .popular-vacations .vacations-cards.active {
+.vacations-section .popular-vacations .vacations-box .vacations-cards.active {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 26.04166667px;
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1, 1);
 }
