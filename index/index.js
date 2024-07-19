@@ -372,19 +372,19 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
     // promise section
-    layer.addEventListener('mousemove', (e) => {
-        const rect = layer.getBoundingClientRect();
-        const mouseX = e.clientX - rect.left;
-        const mouseY = e.clientY - rect.top;
+    window.addEventListener('scroll', function() {
+        const promiseSection = document.querySelector('.promise-section');
+        const promiseBackground = document.querySelector('.promise-section .background');
+        const promiseRect = promiseSection.getBoundingClientRect();
 
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
+        if (promiseRect.top <= this.window.innerHeight && promiseRect.bottom >= 0) {
+            const scrollProgress = (window.innerHeight - promiseRect.top) / (window.innerHeight + promiseRect.height);
+            const translateY = (scrollProgress - 0.5) *30;
 
-        const moveX = (centerX - mouseX) / 50;
-        const moveY = (centerY - mouseY) / 50;
-
-        slideImg.style.transform = `scale(1.1) translate(${moveX}px, ${moveY}px)`;
-    });
+            promiseBackground.style.transform = `translateY(${translateY}%))`
+            promiseBackground.style.backgroundPositionY = `${50 + translateY}%`
+        }
+    })
 
 });
 

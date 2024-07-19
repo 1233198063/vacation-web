@@ -1733,17 +1733,13 @@
     height: (12000px / @vw);
     margin-left: (1500px / @vw);
 
-    background-image: url(../images/607dcd2961c3e396968aac28_031.jpeg);
-    background-size: cover;
+    overflow: hidden;
 
     position: relative;
 
     .container {
-        // background-image: url(../images/607dcd2961c3e396968aac28_031.jpeg);
-        // background-size: cover;
-
         position: relative;
-        z-index: 1;
+        z-index: 2;
 
         display: grid;
         grid-template-rows: 1fr auto;
@@ -1754,8 +1750,6 @@
         padding: (3500px / @vw) 0px;
 
         .text {
-            // position: relative;
-            // z-index: 1;
             max-width: (15000px / @vw);
             text-align: center;
 
@@ -1764,14 +1758,12 @@
                 margin-bottom: @padding-big;
             }
 
-            h1{
+            h1 {
                 color: #fff;
             }
         }
 
         .buttons {
-            // position: relative;
-            // z-index: 1;
             display: flex;
 
             .button {
@@ -1780,7 +1772,7 @@
                 letter-spacing: (20px / @vw);
             }
 
-            .button.works{
+            .button.works {
                 background-color: transparent;
                 border: #fff @border-width solid;
                 font-weight: 600;
@@ -1788,7 +1780,7 @@
             }
         }
 
-        
+
     }
 
     .overlay {
@@ -1798,6 +1790,186 @@
         right: 0%;
         bottom: 0%;
         background-color: rgba(15, 19, 38, 0.55);
+        z-index: 1;
+    }
+
+    .background {
+        background-image: url(../images/607dcd2961c3e396968aac28_031.jpeg);
+        background-size: cover;
+        background-position: center;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         z-index: 0;
+
+        // background image transition with js code
+        transition: transform 0.5s ease, background-position 0.5s ease;
+    }
+}
+
+.steps-section {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    column-gap: (1500px / @vw);
+
+    margin-left: (1500px / @vw);
+    margin-bottom: (3500px / @vw);
+
+    padding: (2500px / @vw) @padding-large 0px;
+
+    height: 110vh;
+
+    // steps left
+    .steps-sticky-card {
+        display: grid;
+        grid-row: 1fr 2fr auto;
+        row-gap: @padding-large;
+
+        padding: @padding-big;
+        background-color: @gray-dot;
+        border-radius: (300px / @vw);
+
+        .step-card-img {
+            height: (3500px / @vw);
+            background-image: url('../images/607b6c801c6cc62928080d5c_Family003.jpeg');
+            background-size: cover;
+            background-position: center;
+
+            border-radius: (100px / @vw);
+        }
+
+        .steps-description {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            row-gap: @padding-big;
+
+            .subtitle {
+                color: #516381;
+            }
+
+            p{
+                color: #516381;
+                font-size: (350px / @vw);
+                line-height: 1.6em;
+            }
+        }
+
+        .button {
+            margin-bottom: @padding-large;
+            max-width: (5000px / @vw);
+
+            padding-left: @padding-small;
+            padding-right: @padding-small;
+            font-size: (180px / @vw);
+            letter-spacing: (35px / @vw);
+        }
+
+        .button:hover {
+            background-color: #081c3a;
+        }
+
+    }
+
+    // steps right
+    .steps-cards {
+        position: relative;
+        padding: 0px (1500px / @vw);
+
+        overflow: scroll;
+        scrollbar-width: none;
+
+        .subtitle-intro-wrapper{
+            display: flex;
+            margin-bottom: @padding-large;
+
+            .subtitle {
+                margin-right: @padding-small;
+            }
+        }
+
+        .steps-card-wrapper {
+            display: grid;
+            grid-template-rows: repeat(4, 1fr);
+            row-gap: @padding-large;
+            
+            .verticle-line {
+                margin-top: (2250px / @vw);
+                height: 100%;
+                width: (30px / @vw);
+
+                position: absolute;
+                left: (500px / @vw);
+                top: 0;
+                bottom: 0;
+
+                background-color: @gray-dot;
+                z-index: 0;
+            }
+
+            .steps-card {
+                display: flex;
+                flex-direction: column;
+
+                border: @border-width solid rgba(192, 192, 211, 0.2);
+                border-radius: (20px / @vw);
+                padding: @padding-large;
+                margin-bottom: @padding-large;
+
+                position: relative;
+
+                .steps-circle {
+                    width: (500px / @vw);
+                    height: (500px / @vw);
+                    position: absolute;
+                    left: (-1000px / @vw);
+                    top: 50%;
+                    transform: translateY(-50%);
+                    z-index: 5;
+
+                    .steps-dot {
+                        width: (200px / @vw);
+                        height: (200px / @vw);
+
+                        background-color: @gray-dot;
+                        border-radius: 50%;
+
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+
+                        transform: translate(-50%, -50%);
+                        z-index: 8;
+                    }
+
+                    .steps-circle-outline {
+                        width: (800px / @vw);
+                        height: (800px / @vw);
+
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+
+                        border-radius: 50%;
+                        border: (30px / @vw) solid @gray-dot;
+
+                        background-color: #fff;
+                        transform: translate(-50%, -50%)
+                    }
+
+                    .card-arrow {
+                        width: (500px / @vw);
+                        height: (500px / @vw);
+
+                        background-color: #fff;
+                        border-top: @border-width solid rgba(192, 192, 211, 0.2);
+                        border-left: @border-width solid rgba(192, 192, 211, 0.2);
+                        border-top-left-radius: (20px / @vw);
+                    }
+                }
+            }
+        }
     }
 }
