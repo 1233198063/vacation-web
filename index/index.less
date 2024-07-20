@@ -6,6 +6,12 @@
 @padding-mini: (100px / @vw);
 @shadow: rgba(192, 192, 211, 0.1);
 
+// p for global
+p {
+    color: #516381;
+    font-size: (350px / @vw);
+    line-height: 1.6em;
+}
 
 .preloader {
     position: fixed;
@@ -1823,13 +1829,6 @@
 
     height: 100vh;
 
-    // p in both left and right part
-    p {
-        color: #516381;
-        font-size: (350px / @vw);
-        line-height: 1.6em;
-    }
-
     // steps left part
     .steps-sticky-card {
         display: grid;
@@ -2006,6 +2005,116 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+
+.about-section {
+    background-color: #f7f8fc;
+    margin-left: (1500px / @vw);
+    padding: (2500px / @vw) (1800px / @vw);
+    
+    .about-wrapper {
+        display: grid;
+        column-gap: (1500px / @vw);
+        row-gap: (300px / @vw);
+        margin-bottom: (1500px / @vw);
+
+        .subtitle {
+            grid-area: 1 / 1 / 2 / 3;
+        }
+
+        .about-intro {
+            grid-area: 2 / 1 / 3 / 2;
+        }
+
+        .stacked-paragraphs {
+            grid-area: 2 / 2 / 3 / 3;
+
+            display: grid;
+            grid-template-rows: auto;
+            row-gap: @padding-big;
+
+            p {
+                display: inline-block;
+            }
+        }
+    }
+
+    .about-img-wrapper {
+
+    }
+}
+
+.agents-section {
+    background-color: #f7f8fc;
+    margin-left: (1500px / @vw);
+    padding: 0px (1800px / @vw);
+
+    .subtitle-intro-wrapper {
+        display: flex;
+        align-items: center;
+
+        .horizontal-line {
+            margin: 0px @padding-big;
+        }
+        .button {
+            background-color: transparent;
+            border: @border-width solid rgba(192, 192, 211, 0.2);
+            padding: (160px / @vw) (300px / @vw);
+        }
+
+        .button:hover {
+            background-color: #081c3a;
+            color: #fff;
+            border-color: #081c3a;
+        }
+    }
+
+    .team-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        background-color: #fff;
+        border-radius: (300px / @vw);
+        border: @border-width solid rgba(192, 192, 211, 0.2);
+
+        margin-top: @padding-large;
+
+        list-style: none;
+
+        .team-member {
+            padding: @padding-big;
+
+            .team-card {
+                display: grid;
+                grid-template-rows: 1fr auto;
+                row-gap: @padding-big;
+
+                .team-img {
+                    height: (5500px / @vw);
+                    overflow: hidden;
+                    border-radius: (250px / @vw);
+
+                    img {
+                        width: 100%;
+                        
+                    }
+                }
+
+                .team-member-info {
+                    h3 {
+                        color: black;
+                        margin-bottom: @padding-big;
+                    }
+    
+                    p {
+                        font-size: (250px / @vw);
+                    }
+                }
+
             }
         }
     }
