@@ -1008,7 +1008,7 @@
   margin-top: 26.04166667px;
   display: grid;
   grid-template-columns: 1fr 1px 1fr 1px 1fr 1px 1fr;
-  border: 0.41666667px solid rgba(192, 192, 211, 0.2);
+  border: 0.52083333px solid rgba(192, 192, 211, 0.2);
   border-radius: 9.375px;
   background-color: #fff;
 }
@@ -1028,7 +1028,7 @@
   height: 52.08333333px;
   padding: 10.41666667px;
   background-color: #f7f8fc;
-  border: 0.41666667px solid rgba(192, 192, 211, 0.2);
+  border: 0.52083333px solid rgba(192, 192, 211, 0.2);
   border-radius: 100%;
 }
 .benefits-section .benefits-bottom .benefits-box .benefits-card .benefits-icon span {
@@ -1219,7 +1219,7 @@
   left: 50%;
   top: 50%;
   border-radius: 50%;
-  border: 0.41666667px solid #e6e6f3;
+  border: 0.52083333px solid #e6e6f3;
   background-color: #fff;
   transition: all 2s;
   transform: translate(-50%, -50%) scale(1, 1);
@@ -1228,7 +1228,7 @@
   background-color: #081c3a;
 }
 .vacations-section .popular-vacations .vacations-tab-menu .tab-location.selected .membership-outline-circle {
-  border: 0.41666667px solid #081c3a;
+  border: 0.52083333px solid #081c3a;
   transform: translate(-50%, -50%) scale(3, 3);
 }
 .vacations-section .popular-vacations .vacations-tab-menu .location-indicator {
@@ -1381,7 +1381,7 @@
 }
 .promise-section .container .buttons .button.works {
   background-color: transparent;
-  border: #fff 0.41666667px solid;
+  border: #fff 0.52083333px solid;
   font-weight: 600;
   margin-left: 10.41666667px;
 }
@@ -1409,11 +1409,16 @@
 .steps-section {
   display: grid;
   grid-template-columns: 2fr 3fr;
-  column-gap: 78.125px;
+  column-gap: 130.20833333px;
   margin-left: 78.125px;
   margin-bottom: 182.29166667px;
   padding: 130.20833333px 26.04166667px 0px;
-  height: 110vh;
+  height: 100vh;
+}
+.steps-section p {
+  color: #516381;
+  font-size: 18.22916667px;
+  line-height: 1.6em;
 }
 .steps-section .steps-sticky-card {
   display: grid;
@@ -1437,11 +1442,6 @@
 }
 .steps-section .steps-sticky-card .steps-description .subtitle {
   color: #516381;
-}
-.steps-section .steps-sticky-card .steps-description p {
-  color: #516381;
-  font-size: 18.22916667px;
-  line-height: 1.6em;
 }
 .steps-section .steps-sticky-card .button {
   margin-bottom: 26.04166667px;
@@ -1473,12 +1473,12 @@
   row-gap: 26.04166667px;
 }
 .steps-section .steps-cards .steps-card-wrapper .verticle-line {
-  margin-top: 117.1875px;
-  height: 100%;
+  height: 1145.83333333px;
   width: 1.5625px;
+  margin: 67.70833333px 0px;
   position: absolute;
   left: 26.04166667px;
-  top: 0;
+  top: 117.1875px;
   bottom: 0;
   background-color: #e6e6f3;
   z-index: 0;
@@ -1486,7 +1486,7 @@
 .steps-section .steps-cards .steps-card-wrapper .steps-card {
   display: flex;
   flex-direction: column;
-  border: 0.41666667px solid rgba(192, 192, 211, 0.2);
+  border: 0.52083333px solid rgba(192, 192, 211, 0.2);
   border-radius: 1.04166667px;
   padding: 26.04166667px;
   margin-bottom: 26.04166667px;
@@ -1527,7 +1527,31 @@
   width: 26.04166667px;
   height: 26.04166667px;
   background-color: #fff;
-  border-top: 0.41666667px solid rgba(192, 192, 211, 0.2);
-  border-left: 0.41666667px solid rgba(192, 192, 211, 0.2);
-  border-top-left-radius: 1.04166667px;
+  border-top: 1.5625px solid rgba(192, 192, 211, 0.2);
+  border-left: 1.5625px solid rgba(192, 192, 211, 0.2);
+  border-top-left-radius: 1.5625px;
+  transform: rotate(-45deg);
+  position: absolute;
+  z-index: 10;
+  left: 37.5px;
+}
+.steps-section .steps-cards .steps-card-wrapper .steps-card .steps-content {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  row-gap: 52.08333333px;
+}
+.steps-section .steps-cards .steps-card-wrapper .steps-card .steps-content .steps-icon {
+  border: 1.5625px solid rgba(192, 192, 211, 0.2);
+  border-radius: 50%;
+  background-color: #f7f8fc;
+  color: #516381;
+  width: 52.08333333px;
+  height: 52.08333333px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+.steps-section .steps-cards .steps-card-wrapper .steps-card .steps-content .steps-description h3 {
+  margin-bottom: 26.04166667px;
 }

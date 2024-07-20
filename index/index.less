@@ -1,5 +1,5 @@
 @vw: 19.20vw;
-@border-width: (8px / @vw);
+@border-width: (10px / @vw);
 @padding-large: (500px / @vw);
 @padding-big: (300px / @vw);
 @padding-small: (200px / @vw);
@@ -1810,19 +1810,27 @@
     }
 }
 
+// steps section
 .steps-section {
     display: grid;
     grid-template-columns: 2fr 3fr;
-    column-gap: (1500px / @vw);
+    column-gap: (2500px / @vw);
 
     margin-left: (1500px / @vw);
     margin-bottom: (3500px / @vw);
 
     padding: (2500px / @vw) @padding-large 0px;
 
-    height: 110vh;
+    height: 100vh;
 
-    // steps left
+    // p in both left and right part
+    p {
+        color: #516381;
+        font-size: (350px / @vw);
+        line-height: 1.6em;
+    }
+
+    // steps left part
     .steps-sticky-card {
         display: grid;
         grid-row: 1fr 2fr auto;
@@ -1849,12 +1857,6 @@
             .subtitle {
                 color: #516381;
             }
-
-            p{
-                color: #516381;
-                font-size: (350px / @vw);
-                line-height: 1.6em;
-            }
         }
 
         .button {
@@ -1873,7 +1875,7 @@
 
     }
 
-    // steps right
+    // steps right part
     .steps-cards {
         position: relative;
         padding: 0px (1500px / @vw);
@@ -1881,7 +1883,7 @@
         overflow: scroll;
         scrollbar-width: none;
 
-        .subtitle-intro-wrapper{
+        .subtitle-intro-wrapper {
             display: flex;
             margin-bottom: @padding-large;
 
@@ -1894,15 +1896,16 @@
             display: grid;
             grid-template-rows: repeat(4, 1fr);
             row-gap: @padding-large;
-            
+
             .verticle-line {
-                margin-top: (2250px / @vw);
-                height: 100%;
+                height: (22000px / @vw);
                 width: (30px / @vw);
+
+                margin: (1300px / @vw) 0px;
 
                 position: absolute;
                 left: (500px / @vw);
-                top: 0;
+                top: (2250px / @vw);
                 bottom: 0;
 
                 background-color: @gray-dot;
@@ -1964,9 +1967,43 @@
                         height: (500px / @vw);
 
                         background-color: #fff;
-                        border-top: @border-width solid rgba(192, 192, 211, 0.2);
-                        border-left: @border-width solid rgba(192, 192, 211, 0.2);
-                        border-top-left-radius: (20px / @vw);
+                        border-top: (30px / @vw) solid rgba(192, 192, 211, 0.2);
+                        border-left: (30px / @vw) solid rgba(192, 192, 211, 0.2);
+                        border-top-left-radius: (30px / @vw);
+                        transform: rotate(-45deg);
+
+                        position: absolute;
+                        z-index: 10;
+
+                        left: (720px / @vw);
+                    }
+                }
+
+                .steps-content {
+                    display: grid;
+                    grid-template-rows: auto 1fr;
+                    row-gap: (1000px / @vw);
+
+                    .steps-icon {
+                        border: (30px / @vw) solid rgba(192, 192, 211, 0.2);
+                        border-radius: 50%;
+                        background-color: #f7f8fc;
+                        color: #516381;
+
+                        width: (1000px / @vw);
+                        height: (1000px / @vw);
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        font-weight: 600;
+                    }
+
+                    .steps-description {
+                        h3 {
+                            margin-bottom: (500px / @vw);
+                        }
                     }
                 }
             }
