@@ -1839,7 +1839,7 @@ p {
 
         .step-card-img {
             height: (3500px / @vw);
-            background-image: url('../images/607b6c801c6cc62928080d5c_Family003.jpeg');
+            background-image: url('../images/Family002.jpeg');
             background-size: cover;
             background-position: center;
 
@@ -2014,6 +2014,8 @@ p {
     margin-left: (1500px / @vw);
     padding: (2500px / @vw) (1800px / @vw);
 
+    overflow: hidden;
+
     .about-wrapper {
         display: grid;
         column-gap: (1500px / @vw);
@@ -2041,9 +2043,114 @@ p {
         }
     }
 
-    .about-img-wrapper {}
+    // family images reversed move with mousemove
+    .about-img-wrapper {
+        display: flex;
+
+        margin-left: -(1800px / @vw);
+
+        height: (6500px / @vw);
+
+        transition: all 5s ease;
+
+
+        a {
+            display: block;
+            flex-shrink: 0;
+            align-items: stretch;
+
+            width: (6500px / @vw);
+            height: 100%;
+            position: relative;
+
+            .overlay {
+                position: absolute;
+                left: 0%;
+                top: 0%;
+                right: 0%;
+                bottom: 0%;
+
+                background-color: transparent;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+
+                transition: background-color 0.8s linear;
+
+                .view-icon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    width: (800px / @vw);
+                    height: (800px / @vw);
+                    padding: @padding-big;
+                    background-color: transparent;
+                    border: @border-width solid transparent;
+                    border-radius: 50%;
+
+                    margin: @padding-small;
+
+                    transform: scale3d(0.8, 0.8, 0.8);
+
+                    transition: all 0.8s;
+
+                    span {
+                        display: block;
+                        color: transparent;
+
+                        transform: scale3d(0.8, 0.8, 0.8);
+                        transition: all 0.8s;
+                    }
+                }
+
+                .subtitle {
+                    color: transparent;
+                    margin-bottom: @padding-large;
+                    transform: scale3d(0.8, 0.8, 0.8);
+
+                    transition: all 0.8s;
+                }
+
+            }
+
+            .family-img {
+                width: 100%;
+                height: 100%;
+
+                background-position: 50% 50%;
+                background-size: cover;
+            }
+        }
+
+        a:hover {
+            .overlay {
+                background-color: rgba(15, 19, 38, 0.5);
+
+                .view-icon {
+                    background-color: @shadow;
+                    border: @border-width solid #fff;
+                    border-radius: 50%;
+                    transform: scale3d(1, 1, 1) translateY(-1rem);
+
+                    span {
+                        color: #fff;
+                        transform: scale3d(1, 1, 1);
+                    }
+                }
+
+                .subtitle {
+                    color: #fff;
+                    transform: scale3d(1, 1, 1) translateY(-1rem);
+                }
+            }
+        }
+    }
 }
 
+// agents section
 .agents-section {
     background-color: #f7f8fc;
     margin-left: (1500px / @vw);
@@ -2084,7 +2191,7 @@ p {
 
         .team-member {
             padding: @padding-big;
-            
+
             background-color: #fff;
             border-radius: (300px / @vw);
 
@@ -2095,15 +2202,18 @@ p {
                 grid-template-rows: 1fr auto;
                 row-gap: @padding-big;
 
-                .team-img {
-                    height: (4800px / @vw);
+                .team-member-pic {
+                    height: (5200px / @vw);
                     overflow: hidden;
                     border-radius: (250px / @vw);
 
-                    background-size: cover;
-                    background-position: 50% 50%;
+                    .team-img {
+                        height: 100%;
+                        background-size: cover;
+                        background-position: 50% 50%;
 
-                    transition: background-size 1s linear;
+                        transition: transform 1s ease;
+                    }
                 }
 
                 .team-member-info {
@@ -2124,13 +2234,13 @@ p {
         }
 
         .team-member:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
             z-index: 1;
             box-shadow: 0px @padding-small @padding-small @padding-small @shadow;
         }
 
         .team-member:hover .team-img {
-            background-size: 110%;
+            transform: scale3d(1.1, 1.1, 1.1);
         }
     }
 }

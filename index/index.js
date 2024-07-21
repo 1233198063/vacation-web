@@ -372,42 +372,71 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
     // promise section
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         const promiseSection = document.querySelector('.promise-section');
         const promiseBackground = document.querySelector('.promise-section .background');
         const promiseRect = promiseSection.getBoundingClientRect();
 
         if (promiseRect.top <= this.window.innerHeight && promiseRect.bottom >= 0) {
             const scrollProgress = (window.innerHeight - promiseRect.top) / (window.innerHeight + promiseRect.height);
-            const translateY = (scrollProgress - 0.5) *30;
+            const translateY = (scrollProgress - 0.5) * 30;
 
             promiseBackground.style.transform = `translateY(${translateY}%))`
             promiseBackground.style.backgroundPositionY = `${50 + translateY}%`
         }
     })
 
+    // about section family pictures
+
+    // background images
+    const familyArr = [
+        'url(./images/Family001.jpeg)',
+        'url(./images/Family002.jpeg)',
+        'url(./images/Family003.jpeg)',
+        'url(./images/Family004.jpeg)',
+        'url(./images/Family005.jpeg)',
+        'url(./images/Family006.jpeg)',
+    ];
+
+    const familyImages = document.querySelectorAll('.about-img-wrapper .family-img');
+
+    familyImages.forEach((div, index) => {
+        if (familyArr[index]) {
+            div.style.backgroundImage = familyArr[index];
+        }
+    });
+
+    const aboutImgWrapper = document.querySelector('.about-img-wrapper')
+    const lastImgLink = document.querySelector('.about-img-wrapper .about-imgs-item:last-child')
+
+    // console.log(lastImgLink.offsetLeft);
+    // 1771
+
+    // console.log(window.innerWidth);
+    // 1042
+
+    aboutImgWrapper.addEventListener('mousemove', function(e){
+        // console.log(e.clientX);
+        if (e.clientX <= window.innerWidth / 2) {
+            aboutImgWrapper.style.marginLeft = '-100px'
+        } else {
+            aboutImgWrapper.style.marginLeft = '-819px'
+        }
+    })
 
     // agents section
     const teamArr = [
-        {
-            img: 'url(./images/607dd2aa459b2b6f7fc0100d_Portrait011.jpeg)',
-        },
-        {
-            img: 'url(./images/607dd2c8b05ec3b67689516f_Portrait019.jpeg)',
-        },
-        {
-            img: 'url(./images/607dd2e5e99d455515f2034c_Portrait015.jpeg)',
-        },
-        {
-            img: 'url(./images/607dd2fe2fd765fe6078acca_Portrait016.jpeg)',
-        }
+        'url(./images/607dd2aa459b2b6f7fc0100d_Portrait011.jpeg)',
+        'url(./images/607dd2c8b05ec3b67689516f_Portrait019.jpeg)',
+        'url(./images/607dd2e5e99d455515f2034c_Portrait015.jpeg)',
+        'url(./images/607dd2fe2fd765fe6078acca_Portrait016.jpeg)',
     ];
 
     const teamImg = document.querySelectorAll('.team-member .team-img');
 
     teamImg.forEach((div, index) => {
-        if(teamArr[index]) {
-            div.style.backgroundImage = teamArr[index].img;
+        if (teamArr[index]) {
+            div.style.backgroundImage = teamArr[index];
         }
     });
 
