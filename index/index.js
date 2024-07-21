@@ -386,5 +386,30 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     })
 
+
+    // agents section
+    const teamArr = [
+        {
+            img: 'url(./images/607dd2aa459b2b6f7fc0100d_Portrait011.jpeg)',
+        },
+        {
+            img: 'url(./images/607dd2c8b05ec3b67689516f_Portrait019.jpeg)',
+        },
+        {
+            img: 'url(./images/607dd2e5e99d455515f2034c_Portrait015.jpeg)',
+        },
+        {
+            img: 'url(./images/607dd2fe2fd765fe6078acca_Portrait016.jpeg)',
+        }
+    ];
+
+    const teamImg = document.querySelectorAll('.team-member .team-img');
+
+    teamImg.forEach((div, index) => {
+        if(teamArr[index]) {
+            div.style.backgroundImage = teamArr[index].img;
+        }
+    });
+
 });
 

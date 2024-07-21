@@ -1785,8 +1785,6 @@ p {
                 margin-left: @padding-small;
             }
         }
-
-
     }
 
     .overlay {
@@ -2015,7 +2013,7 @@ p {
     background-color: #f7f8fc;
     margin-left: (1500px / @vw);
     padding: (2500px / @vw) (1800px / @vw);
-    
+
     .about-wrapper {
         display: grid;
         column-gap: (1500px / @vw);
@@ -2043,15 +2041,13 @@ p {
         }
     }
 
-    .about-img-wrapper {
-
-    }
+    .about-img-wrapper {}
 }
 
 .agents-section {
     background-color: #f7f8fc;
     margin-left: (1500px / @vw);
-    padding: 0px (1800px / @vw);
+    padding: 0px (1500px / @vw) (3800px / @vw);
 
     .subtitle-intro-wrapper {
         display: flex;
@@ -2060,6 +2056,7 @@ p {
         .horizontal-line {
             margin: 0px @padding-big;
         }
+
         .button {
             background-color: transparent;
             border: @border-width solid rgba(192, 192, 211, 0.2);
@@ -2087,6 +2084,11 @@ p {
 
         .team-member {
             padding: @padding-big;
+            
+            background-color: #fff;
+            border-radius: (300px / @vw);
+
+            transition: all 1s ease;
 
             .team-card {
                 display: grid;
@@ -2094,28 +2096,41 @@ p {
                 row-gap: @padding-big;
 
                 .team-img {
-                    height: (5500px / @vw);
+                    height: (4800px / @vw);
                     overflow: hidden;
                     border-radius: (250px / @vw);
 
-                    img {
-                        width: 100%;
-                        
-                    }
+                    background-size: cover;
+                    background-position: 50% 50%;
+
+                    transition: background-size 1s linear;
                 }
 
                 .team-member-info {
                     h3 {
                         color: black;
-                        margin-bottom: @padding-big;
+                        margin-bottom: @padding-small;
+
+                        font-size: (400px / @vw);
+                        font-weight: 500;
                     }
-    
+
                     p {
                         font-size: (250px / @vw);
                     }
                 }
 
             }
+        }
+
+        .team-member:hover {
+            transform: scale(1.1);
+            z-index: 1;
+            box-shadow: 0px @padding-small @padding-small @padding-small @shadow;
+        }
+
+        .team-member:hover .team-img {
+            background-size: 110%;
         }
     }
 }
