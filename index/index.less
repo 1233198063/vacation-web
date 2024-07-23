@@ -6,13 +6,6 @@
 @padding-mini: (100px / @vw);
 @shadow: rgba(192, 192, 211, 0.1);
 
-// p for global
-p {
-    color: #516381;
-    font-size: (350px / @vw);
-    line-height: 1.6em;
-}
-
 .preloader {
     position: fixed;
     top: 0;
@@ -369,7 +362,7 @@ p {
 }
 
 .contact-item>a:hover {
-    transform: translateX((500px / @vw));
+    transform: translateX((200px / @vw));
 }
 
 
@@ -1316,6 +1309,11 @@ p {
                     span {
                         display: block;
                     }
+                }
+
+                p {
+                    font-size: (300px / @vw);
+                    line-height: 1.4em;
                 }
             }
 
@@ -2425,6 +2423,11 @@ p {
                     max-width: (2200px / @vw);
                     
                     font-size: (150px / @vw);
+                }
+
+                h3 {
+                    font-weight: 600;
+                    font-size: (360px / @vw);
                 }
             }
         }

@@ -1,3 +1,5 @@
+@vw: 19.20vw;
+
 html {
     height: 100%;
     font-family: sans-serif;
@@ -13,8 +15,8 @@ body {
     font-family: Inter, sans-serif;
     color: #081c3a;
     min-height: 100%;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: (280px / @vw);
+    line-height: (200px / @vw);
     background-color: #fff;
 }
 
@@ -22,7 +24,7 @@ h1 {
     margin-top: 0px;
     margin-bottom: 0px;
     font-family: Poppins, sans-serif;
-    font-size: 48px;
+    font-size: (960px / @vw);
     line-height: 1.25em;
     font-weight: 600;
     letter-spacing: -0.025em;
@@ -30,9 +32,17 @@ h1 {
 
 h2 {
     font-family: Poppins, sans-serif;
-    font-size: 34px;
+    font-size: (680px / @vw);
     line-height: 1.3em;
     font-weight: 600;
+    letter-spacing: -0.03em;
+}
+
+h3 {
+    font-family: Poppins, sans-serif;
+    font-size: (440px / @vw);
+    line-height: 1.2em;
+    font-weight: 500;
     letter-spacing: -0.03em;
 }
 
@@ -40,8 +50,8 @@ h4 {
     margin-top: 0px;
     margin-bottom: 0px;
     font-family: Poppins, sans-serif;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: (360px / @vw);
+    line-height: (480px / @vw);
     font-weight: 500;
     letter-spacing: -0.01em;
 }
@@ -65,7 +75,7 @@ img {
 
 .button {
     display: flex;
-    padding: 16px 32px;
+    padding: (300px / @vw) (320px / @vw);
     justify-content: center;
     align-items: center;
     border-style: none;
@@ -73,9 +83,9 @@ img {
     background-color: #3572ff;
     transition: all 0.5s cubic-bezier(.25, .46, .45, .94);
     color: #fff;
-    font-size: 10px;
+    font-size: (180px / @vw);
     text-align: center;
-    letter-spacing: 3px;
+    letter-spacing: (30px / @vw);
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -91,7 +101,7 @@ a {
 
 
 .horizontal-line {
-    height: 1px;
+    height: (15px / @vw);
     flex: 1;
     background-color: rgba(192, 192, 211, 0.2);
     align-self: center;
@@ -103,9 +113,15 @@ a {
 }
 
 .subtitle {
-    font-size: 11px;
+    font-size: (220px / @vw);
     line-height: 1.4em;
     font-weight: 400;
-    letter-spacing: 3px;
+    letter-spacing: (30px / @vw);
     text-transform: uppercase;
+}
+
+p {
+    color: #516381;
+    font-size: (350px / @vw);
+    line-height: 1.6em;
 }
