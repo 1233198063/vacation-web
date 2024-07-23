@@ -1,5 +1,15 @@
 @vw: 19.20vw;
 
+@border-width: (10px / @vw);
+
+@padding-large: (500px / @vw);
+@padding-big: (300px / @vw);
+@padding-small: (200px / @vw);
+@padding-mini: (100px / @vw);
+
+@shadow: rgba(192, 192, 211, 0.1);
+
+
 html {
     height: 100%;
     font-family: sans-serif;
@@ -118,6 +128,12 @@ a {
     font-weight: 400;
     letter-spacing: (30px / @vw);
     text-transform: uppercase;
+}
+
+.subtitle.small {
+    font-size: (130px / @vw);
+    letter-spacing: (40px / @vw);
+    margin-bottom: @padding-mini;
 }
 
 p {

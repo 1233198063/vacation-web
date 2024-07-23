@@ -1317,6 +1317,7 @@
 .vacations-section .popular-vacations .vacations-box .vacations-cards .vacations-card .card-details .vacation-price .subtitle.small {
   font-size: 6.77083333px;
   letter-spacing: 2.08333333px;
+  margin-bottom: 5.20833333px;
 }
 .vacations-section .popular-vacations .vacations-box .vacations-cards .vacations-card .card-details .vacation-price .dynamic-price {
   display: flex;
