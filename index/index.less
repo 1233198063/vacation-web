@@ -2245,11 +2245,12 @@ p {
     }
 }
 
+// posts section
 .posts-section {
-    margin: -(1500px / @vw) (1500px / @vw) (1500px / @vw) (3000px / @vw);
+    margin: -(1500px / @vw) (1500px / @vw) (2500px / @vw) (3000px / @vw);
     padding: (1000px / @vw);
 
-    background-color: palegreen;
+    background-color: #fff;
     border-radius: (300px / @vw);
 
     display: grid;
@@ -2258,6 +2259,8 @@ p {
 
     min-height: (15000px / @vw);
 
+    //left part
+    //big image and heading card
     .journal-left-wrapper {
         position: relative;
 
@@ -2296,7 +2299,7 @@ p {
 
                 background-color: #fff;
                 border-radius: (300px / @vw);
-                box-shadow: 0 (60px / @vw) (480px / @vw) (-40px / @vw) rgba(53, 64, 117, 0.2);
+                box-shadow: 0 (60px / @vw) (480px / @vw) (-40px / @vw) rgba(53, 64, 117, 0.1);
 
                 margin: 0px @padding-large;
                 padding: @padding-large;
@@ -2346,6 +2349,8 @@ p {
         }
     }
 
+    //right part
+    //popular posts
     .journal-right-wrapper {
         height: 100%;
 
@@ -2372,14 +2377,18 @@ p {
                 border-radius: @padding-mini;
                 padding: @padding-mini;
 
+                transition: all 1s ease;
+
                 a {
                     display: grid;
                     grid-template-columns: 1fr 2fr;
                     column-gap: @padding-big;
                     height: 100%;
+                    text-decoration: none;
+                    color: #081c3a;
 
                     .journal-list-image {
-                        width: (2500px / @vw);
+                        width: (2800px / @vw);
                         height: 100%;
                         border-radius: @padding-mini;
                         overflow: hidden;
@@ -2390,10 +2399,94 @@ p {
 
                             background-size: cover;
                             background-position: 50% 50%;
+                            transition: all 1s;
                         }
                     }
                 }
             }
+
+            .post-item:hover {
+                transform: scale(1.05);
+                box-shadow: 0 (60px / @vw) (480px / @vw) (-40px / @vw) rgba(53, 64, 117, 0.2);
+
+                .post-img {
+                    transform: scale3d(1.1, 1.1, 1.1);
+                }
+            }
+
+            .journal-list-item-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+
+                .journal-category-tag {
+                    background-color: #f7f8fc;
+                    padding: @padding-mini;
+                    max-width: (2200px / @vw);
+                    
+                    font-size: (150px / @vw);
+                }
+            }
         }
     }
+}
+
+footer {
+    position: relative;
+
+    margin-left: (1500px / @vw);
+    padding: (800px / @vw) (1500px / @vw) (1000px / @vw) (800px / @vw);
+
+    display: flex;
+    justify-content: space-between;
+
+    border-top: (15px / @vw) solid rgba(192, 192, 211, 0.2);
+
+
+    .footer-pages{
+        display: flex;
+        align-items: center;
+
+        .destinations {
+            background-color: #f7f8fc;
+
+            padding: @padding-small;
+            margin-right: @padding-large;
+
+            border-radius: @padding-mini;
+        }
+    
+        .places {
+            list-style: none;
+            display: flex;
+
+            li {
+                margin-right: @padding-large;
+
+                a {
+                    text-decoration: none;
+                    color: #081c3a;
+                }
+            }
+        }
+    }
+
+    .fooer-logo {
+
+        .brand{
+            color: black;
+
+            .thin {
+                font-weight: 400;
+            }
+        }
+        
+        .subtitle {
+            position: absolute;
+            bottom: @padding-large;
+            right: (1500px / @vw);
+        }
+        
+    }
+    
 }

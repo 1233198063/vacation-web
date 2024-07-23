@@ -1729,9 +1729,9 @@ p {
   transform: scale3d(1.1, 1.1, 1.1);
 }
 .posts-section {
-  margin: -78.125px 78.125px 78.125px 156.25px;
+  margin: -78.125px 78.125px 130.20833333px 156.25px;
   padding: 52.08333333px;
-  background-color: palegreen;
+  background-color: #fff;
   border-radius: 15.625px;
   display: grid;
   grid-template-columns: 5fr 4fr;
@@ -1766,7 +1766,7 @@ p {
   position: relative;
   background-color: #fff;
   border-radius: 15.625px;
-  box-shadow: 0 3.125px 25px -2.08333333px rgba(53, 64, 117, 0.2);
+  box-shadow: 0 3.125px 25px -2.08333333px rgba(53, 64, 117, 0.1);
   margin: 0px 26.04166667px;
   padding: 26.04166667px;
   display: grid;
@@ -1824,15 +1824,18 @@ p {
   background-color: #fff;
   border-radius: 5.20833333px;
   padding: 5.20833333px;
+  transition: all 1s ease;
 }
 .posts-section .journal-right-wrapper .post-list .post-item a {
   display: grid;
   grid-template-columns: 1fr 2fr;
   column-gap: 15.625px;
   height: 100%;
+  text-decoration: none;
+  color: #081c3a;
 }
 .posts-section .journal-right-wrapper .post-list .post-item a .journal-list-image {
-  width: 130.20833333px;
+  width: 145.83333333px;
   height: 100%;
   border-radius: 5.20833333px;
   overflow: hidden;
@@ -1842,4 +1845,63 @@ p {
   height: 100%;
   background-size: cover;
   background-position: 50% 50%;
+  transition: all 1s;
+}
+.posts-section .journal-right-wrapper .post-list .post-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3.125px 25px -2.08333333px rgba(53, 64, 117, 0.2);
+}
+.posts-section .journal-right-wrapper .post-list .post-item:hover .post-img {
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+.posts-section .journal-right-wrapper .post-list .journal-list-item-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.posts-section .journal-right-wrapper .post-list .journal-list-item-content .journal-category-tag {
+  background-color: #f7f8fc;
+  padding: 5.20833333px;
+  max-width: 114.58333333px;
+  font-size: 7.8125px;
+}
+footer {
+  position: relative;
+  margin-left: 78.125px;
+  padding: 41.66666667px 78.125px 52.08333333px 41.66666667px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 0.78125px solid rgba(192, 192, 211, 0.2);
+}
+footer .footer-pages {
+  display: flex;
+  align-items: center;
+}
+footer .footer-pages .destinations {
+  background-color: #f7f8fc;
+  padding: 10.41666667px;
+  margin-right: 26.04166667px;
+  border-radius: 5.20833333px;
+}
+footer .footer-pages .places {
+  list-style: none;
+  display: flex;
+}
+footer .footer-pages .places li {
+  margin-right: 26.04166667px;
+}
+footer .footer-pages .places li a {
+  text-decoration: none;
+  color: #081c3a;
+}
+footer .fooer-logo .brand {
+  color: black;
+}
+footer .fooer-logo .brand .thin {
+  font-weight: 400;
+}
+footer .fooer-logo .subtitle {
+  position: absolute;
+  bottom: 26.04166667px;
+  right: 78.125px;
 }
