@@ -1728,3 +1728,118 @@ p {
 .agents-section .team-box .team-member:hover .team-img {
   transform: scale3d(1.1, 1.1, 1.1);
 }
+.posts-section {
+  margin: -78.125px 78.125px 78.125px 156.25px;
+  padding: 52.08333333px;
+  background-color: palegreen;
+  border-radius: 15.625px;
+  display: grid;
+  grid-template-columns: 5fr 4fr;
+  column-gap: 46.875px;
+  min-height: 781.25px;
+}
+.posts-section .journal-left-wrapper {
+  position: relative;
+}
+.posts-section .journal-left-wrapper .large-journal-img-wrapper {
+  border-radius: 15.625px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.posts-section .journal-left-wrapper .large-journal-img-wrapper .large-journal-img {
+  height: 100%;
+  width: 100%;
+  background-image: url(../images/607dcc73e99d454e25eb062b_post001.jpeg);
+  background-size: cover;
+  background-position: 50% 50%;
+  transition: transform 0.8s ease;
+}
+.posts-section .journal-left-wrapper .large-journal-img-wrapper:hover .large-journal-img {
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+.posts-section .journal-left-wrapper .journal-post-info {
+  position: absolute;
+  bottom: -78.125px;
+}
+.posts-section .journal-left-wrapper .journal-post-info .large-journal-content {
+  position: relative;
+  background-color: #fff;
+  border-radius: 15.625px;
+  box-shadow: 0 3.125px 25px -2.08333333px rgba(53, 64, 117, 0.2);
+  margin: 0px 26.04166667px;
+  padding: 26.04166667px;
+  display: grid;
+  grid-template-rows: auto;
+  row-gap: 15.625px;
+}
+.posts-section .journal-left-wrapper .journal-post-info .large-journal-content .journal-category-tag {
+  position: absolute;
+  top: -13.02083333px;
+  left: 15.625px;
+  height: 26.04166667px;
+  background-color: #f7f8fc;
+  border-radius: 5.20833333px;
+  padding: 0px 10.41666667px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.posts-section .journal-left-wrapper .journal-post-info .large-journal-content .journal-category-tag .subtitle {
+  font-size: 7.8125px;
+}
+.posts-section .journal-left-wrapper .journal-post-info .large-journal-content .button {
+  height: 15.625px;
+  width: 104.16666667px;
+  padding: 15.625px 10.41666667px;
+  border: 0.52083333px solid #ccc;
+  color: #081c3a;
+}
+.posts-section .journal-left-wrapper .journal-post-info .large-journal-content .button .subtitle {
+  letter-spacing: 1.04166667px;
+  font-size: 9.375px;
+}
+.posts-section .journal-left-wrapper .journal-post-info .large-journal-content .button:hover {
+  background-color: #081c3a;
+  color: #fff;
+}
+.posts-section .journal-right-wrapper {
+  height: 100%;
+}
+.posts-section .journal-right-wrapper .subtitle-intro-wrapper {
+  display: flex;
+  margin-bottom: 26.04166667px;
+}
+.posts-section .journal-right-wrapper .subtitle-intro-wrapper .subtitle {
+  margin-right: 15.625px;
+}
+.posts-section .journal-right-wrapper .post-list {
+  list-style: none;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  row-gap: 10.41666667px;
+  height: 100%;
+}
+.posts-section .journal-right-wrapper .post-list .post-item {
+  background-color: #fff;
+  border-radius: 5.20833333px;
+  padding: 5.20833333px;
+}
+.posts-section .journal-right-wrapper .post-list .post-item a {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 15.625px;
+  height: 100%;
+}
+.posts-section .journal-right-wrapper .post-list .post-item a .journal-list-image {
+  width: 130.20833333px;
+  height: 100%;
+  border-radius: 5.20833333px;
+  overflow: hidden;
+}
+.posts-section .journal-right-wrapper .post-list .post-item a .journal-list-image .post-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+}

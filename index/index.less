@@ -2244,3 +2244,156 @@ p {
         }
     }
 }
+
+.posts-section {
+    margin: -(1500px / @vw) (1500px / @vw) (1500px / @vw) (3000px / @vw);
+    padding: (1000px / @vw);
+
+    background-color: palegreen;
+    border-radius: (300px / @vw);
+
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    column-gap: (900px / @vw);
+
+    min-height: (15000px / @vw);
+
+    .journal-left-wrapper {
+        position: relative;
+
+        .large-journal-img-wrapper {
+            border-radius: (300px / @vw);
+            height: 100%;
+            width: 100%;
+
+            overflow: hidden;
+
+            .large-journal-img {
+                height: 100%;
+                width: 100%;
+
+                background-image: url(../images/607dcc73e99d454e25eb062b_post001.jpeg);
+
+                background-size: cover;
+                background-position: 50% 50%;
+
+                transition: transform 0.8s ease;
+            }
+        }
+
+        .large-journal-img-wrapper:hover {
+            .large-journal-img {
+                transform: scale3d(1.1, 1.1, 1.1);
+            }
+        }
+
+        .journal-post-info {
+            position: absolute;
+            bottom: -(1500px / @vw);
+
+            .large-journal-content {
+                position: relative;
+
+                background-color: #fff;
+                border-radius: (300px / @vw);
+                box-shadow: 0 (60px / @vw) (480px / @vw) (-40px / @vw) rgba(53, 64, 117, 0.2);
+
+                margin: 0px @padding-large;
+                padding: @padding-large;
+
+                display: grid;
+                grid-template-rows: auto;
+                row-gap: @padding-big;
+
+                .journal-category-tag {
+                    position: absolute;
+                    top: -(250px / @vw);
+                    left: @padding-big;
+
+                    height: (500px / @vw);
+                    background-color: #f7f8fc;
+                    border-radius: (100px / @vw);
+                    padding: 0px (200px / @vw);
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .subtitle {
+                        font-size: (150px / @vw);
+                    }
+                }
+
+                .button {
+                    height: @padding-big;
+                    width: (2000px / @vw);
+                    padding: (300px / @vw) (200px / @vw);
+
+                    border: @border-width solid #ccc;
+                    color: #081c3a;
+
+                    .subtitle {
+                        letter-spacing: (20px / @vw);
+                        font-size: (180px / @vw);
+                    }
+                }
+
+                .button:hover {
+                    background-color: #081c3a;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .journal-right-wrapper {
+        height: 100%;
+
+        .subtitle-intro-wrapper {
+            display: flex;
+            margin-bottom: @padding-large;
+
+            .subtitle {
+                margin-right: @padding-big;
+            }
+        }
+
+        .post-list {
+            list-style: none;
+
+            display: grid;
+            grid-template-rows: repeat(4, 1fr);
+            row-gap: @padding-small;
+
+            height: 100%;
+            
+            .post-item {
+                background-color: #fff;
+                border-radius: @padding-mini;
+                padding: @padding-mini;
+
+                a {
+                    display: grid;
+                    grid-template-columns: 1fr 2fr;
+                    column-gap: @padding-big;
+                    height: 100%;
+
+                    .journal-list-image {
+                        width: (2500px / @vw);
+                        height: 100%;
+                        border-radius: @padding-mini;
+                        overflow: hidden;
+
+                        .post-img {
+                            width: 100%;
+                            height: 100%;
+
+                            background-size: cover;
+                            background-position: 50% 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
