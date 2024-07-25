@@ -204,7 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // desinations section swiper
-    const swiper = new Swiper('.swiper', {
+    const swiper = new Swiper('.destinations-slide .swiper', {
         speed: 900,
         loop: true,
         slidesPerView: 3,
@@ -221,7 +221,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // when mouse move on the swiper images
-    const swiperSlides = document.querySelectorAll('.swiper-slide');
+    const swiperSlides = document.querySelectorAll('.destinations-slide .swiper-slide');
 
     swiperSlides.forEach(slide => {
         const layer = slide.querySelector('.gradient-overlay');
@@ -399,11 +399,20 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     const familyImages = document.querySelectorAll('.about-img-wrapper .family-img');
+    const swiperBg = document.querySelector('.swiper-bg');
+    const closeBtn = document.querySelector('.close-button');
 
     familyImages.forEach((div, index) => {
         if (familyArr[index]) {
             div.style.backgroundImage = familyArr[index];
         }
+        div.parentElement.addEventListener('click', function (e) {
+            e.preventDefault();
+            swiperBg.style.display = 'flex';
+            swiper2.slideToLoop(index, 0);  // slide to the related iamge
+
+            document.body.style.overflow = 'hidden'; // no scroll
+        });
     });
 
     const aboutImgWrapper = document.querySelector('.about-img-wrapper')
@@ -415,7 +424,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // console.log(window.innerWidth);
     // 1042
 
-    aboutImgWrapper.addEventListener('mousemove', function(e){
+    aboutImgWrapper.addEventListener('mousemove', function (e) {
         // console.log(e.clientX);
         if (e.clientX <= window.innerWidth / 2) {
             aboutImgWrapper.style.marginLeft = '-100px'
@@ -423,6 +432,33 @@ document.addEventListener("DOMContentLoaded", function () {
             aboutImgWrapper.style.marginLeft = '-819px'
         }
     })
+
+    var swiper1 = new Swiper(".mySwiper1", {
+        loop: false,
+        spaceBetween: 10,
+        slidesPerView: 5,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+
+    var swiper2 = new Swiper(".mySwiper2", {
+        loop: false,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiper1,
+        },
+    });
+
+    // Close the swiper on click outside
+    closeBtn.addEventListener('click', function () {
+        swiperBg.style.display = 'none';
+        document.body.style.overflow = ''; // can scroll
+    });
+
 
     // agents section
     const teamArr = [

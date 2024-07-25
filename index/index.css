@@ -11,8 +11,8 @@
   overflow: hidden;
 }
 .preloader-indicator {
-  width: 250px;
-  height: 2px;
+  width: 260.41666667px;
+  height: 1.5625px;
   background-color: #aeaeae;
   overflow: hidden;
   z-index: 2;
@@ -99,7 +99,7 @@
   width: 28.64583333px;
   height: 28.64583333px;
   padding: 7.29166667px;
-  border: 1px solid rgba(192, 192, 211, 0.2);
+  border: 1.30208333px solid rgba(192, 192, 211, 0.2);
   border-radius: 100px;
   background-color: rgba(174, 174, 192, 0.05);
   display: flex;
@@ -120,7 +120,7 @@
   z-index: 12;
   display: flex;
   justify-content: center;
-  border-bottom: 1px none rgba(192, 192, 211, 0.2);
+  border-bottom: 1.04166667px none rgba(192, 192, 211, 0.2);
   background-color: transparent;
 }
 .top-nav-container {
@@ -146,8 +146,9 @@
   text-align: center;
 }
 #menu-icon {
-  z-index: 10001;
-  line-height: 80px;
+  position: relative;
+  z-index: 100;
+  line-height: 78.125px;
 }
 .menu-container {
   position: fixed;
@@ -156,7 +157,7 @@
   right: auto;
   bottom: 0%;
   background-color: white;
-  z-index: 1000;
+  z-index: 100;
   transform: translateX(-100%);
   transition: transform 0.5s ease;
 }
@@ -179,16 +180,15 @@
 .scroll-menu-wrapper {
   overflow-y: auto;
   max-height: 80vh;
-  margin-right: 12px;
+  margin-right: 15.625px;
 }
 .vacation-continents {
   display: grid;
-  padding: 0px 24px 36px 80px;
-  flex-direction: column;
+  padding: 0px 26.04166667px 37.5px 78.125px;
   justify-content: center;
   grid-auto-columns: 1fr;
-  grid-column-gap: 16px;
-  grid-row-gap: 48px;
+  grid-column-gap: 10.41666667px;
+  grid-row-gap: 15.625px;
 }
 .vacation-continents .info-box {
   padding: 0px;
@@ -197,7 +197,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 18px;
+  margin-bottom: 15.625px;
 }
 .menu-heading {
   padding-left: 80px;
@@ -905,6 +905,7 @@
 .destinations-section .destinations-slide .swiper .swiper-slide img {
   position: relative;
   border-radius: 2.60416667px;
+  transition: transform 0.3s ease;
 }
 .destinations-section .destinations-slide .swiper .swiper-slide .gradient-overlay {
   position: absolute;
@@ -921,7 +922,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10.41666667px 0 26.04166667px 0;
+  margin: 10.41666667px 0 41.66666667px 0;
   z-index: 201;
 }
 .destinations-section .destinations-slide .swiper .swiper-slide .titles .title {
@@ -954,8 +955,10 @@
 .benefits-section .intro-wrapper .intro-content {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   margin-right: 41.66666667px;
   padding: 10.41666667px;
+  height: 100%;
 }
 .benefits-section .intro-wrapper .intro-content h1 {
   margin: 20.83333333px 0px;
@@ -969,6 +972,7 @@
 }
 .benefits-section .intro-wrapper .intro-content .intro-dropdown-button .button {
   max-width: 312.5px;
+  max-height: 46.875px;
 }
 .benefits-section .intro-wrapper .intro-content .intro-dropdown-button .button:hover {
   background-color: #081c3a;
@@ -1008,7 +1012,7 @@
   margin-top: 26.04166667px;
   display: grid;
   grid-template-columns: 1fr 1px 1fr 1px 1fr 1px 1fr;
-  border: 0.52083333px solid rgba(192, 192, 211, 0.2);
+  border: 1.04166667px solid rgba(192, 192, 211, 0.2);
   border-radius: 9.375px;
   background-color: #fff;
 }
@@ -1028,7 +1032,7 @@
   height: 52.08333333px;
   padding: 10.41666667px;
   background-color: #f7f8fc;
-  border: 0.52083333px solid rgba(192, 192, 211, 0.2);
+  border: 1.04166667px solid rgba(192, 192, 211, 0.2);
   border-radius: 100%;
 }
 .benefits-section .benefits-bottom .benefits-box .benefits-card .benefits-icon span {
@@ -1223,7 +1227,7 @@
   left: 50%;
   top: 50%;
   border-radius: 50%;
-  border: 0.52083333px solid #e6e6f3;
+  border: 1.04166667px solid #e6e6f3;
   background-color: #fff;
   transition: all 2s;
   transform: translate(-50%, -50%) scale(1, 1);
@@ -1232,7 +1236,7 @@
   background-color: #081c3a;
 }
 .vacations-section .popular-vacations .vacations-tab-menu .tab-location.selected .membership-outline-circle {
-  border: 0.52083333px solid #081c3a;
+  border: 1.04166667px solid #081c3a;
   transform: translate(-50%, -50%) scale(3, 3);
 }
 .vacations-section .popular-vacations .vacations-tab-menu .location-indicator {
@@ -1386,7 +1390,7 @@
 }
 .promise-section .container .buttons .button.works {
   background-color: transparent;
-  border: #fff 0.52083333px solid;
+  border: #fff 1.04166667px solid;
   font-weight: 600;
   margin-left: 10.41666667px;
 }
@@ -1446,6 +1450,7 @@
 .steps-section .steps-sticky-card .button {
   margin-bottom: 26.04166667px;
   max-width: 260.41666667px;
+  max-height: 41.66666667px;
   padding-left: 10.41666667px;
   padding-right: 10.41666667px;
   font-size: 9.375px;
@@ -1459,6 +1464,9 @@
   padding: 0px 78.125px;
   overflow: scroll;
   scrollbar-width: none;
+}
+.steps-section .steps-cards::-webkit-scrollbar {
+  display: none;
 }
 .steps-section .steps-cards .subtitle-intro-wrapper {
   display: flex;
@@ -1486,7 +1494,7 @@
 .steps-section .steps-cards .steps-card-wrapper .steps-card {
   display: flex;
   flex-direction: column;
-  border: 0.52083333px solid rgba(192, 192, 211, 0.2);
+  border: 1.04166667px solid rgba(192, 192, 211, 0.2);
   border-radius: 1.04166667px;
   padding: 26.04166667px;
   margin-bottom: 26.04166667px;
@@ -1560,6 +1568,7 @@
   margin-left: 78.125px;
   padding: 130.20833333px 93.75px;
   overflow: hidden;
+  position: relative;
 }
 .about-section .about-wrapper {
   display: grid;
@@ -1617,7 +1626,7 @@
   height: 41.66666667px;
   padding: 15.625px;
   background-color: transparent;
-  border: 0.52083333px solid transparent;
+  border: 1.04166667px solid transparent;
   border-radius: 50%;
   margin: 10.41666667px;
   transform: scale3d(0.8, 0.8, 0.8);
@@ -1646,7 +1655,7 @@
 }
 .about-section .about-img-wrapper a:hover .overlay .view-icon {
   background-color: rgba(192, 192, 211, 0.1);
-  border: 0.52083333px solid #fff;
+  border: 1.04166667px solid #fff;
   border-radius: 50%;
   transform: scale3d(1, 1, 1) translateY(-1rem);
 }
@@ -1657,6 +1666,82 @@
 .about-section .about-img-wrapper a:hover .overlay .subtitle {
   color: #fff;
   transform: scale3d(1, 1, 1) translateY(-1rem);
+}
+.about-section .swiper-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 19, 38);
+  z-index: 101;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10.41666667px 93.75px;
+}
+.about-section .swiper-bg .close-button {
+  position: absolute;
+  top: 20.83333333px;
+  right: 20.83333333px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  z-index: 102;
+}
+.about-section .swiper {
+  width: 80%;
+  height: 80%;
+}
+.about-section .swiper-slide {
+  text-align: center;
+  font-size: 18.75px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-section .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-section .swiper {
+  width: 100%;
+  height: 41.66666667px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.about-section .swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+.about-section .mySwiper2 {
+  height: 80%;
+  width: 100%;
+}
+.about-section .mySwiper1 {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 5.20833333px 0;
+}
+.about-section .mySwiper1 .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+.about-section .mySwiper1 .swiper-slide-thumb-active {
+  opacity: 1;
+}
+.about-section .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .agents-section {
   background-color: #f7f8fc;
@@ -1672,7 +1757,7 @@
 }
 .agents-section .subtitle-intro-wrapper .button {
   background-color: transparent;
-  border: 0.52083333px solid rgba(192, 192, 211, 0.2);
+  border: 1.04166667px solid rgba(192, 192, 211, 0.2);
   padding: 8.33333333px 15.625px;
 }
 .agents-section .subtitle-intro-wrapper .button:hover {
@@ -1685,7 +1770,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   background-color: #fff;
   border-radius: 15.625px;
-  border: 0.52083333px solid rgba(192, 192, 211, 0.2);
+  border: 1.04166667px solid rgba(192, 192, 211, 0.2);
   margin-top: 26.04166667px;
   list-style: none;
 }
@@ -1792,7 +1877,7 @@
   height: 15.625px;
   width: 104.16666667px;
   padding: 15.625px 10.41666667px;
-  border: 0.52083333px solid #ccc;
+  border: 1.04166667px solid #ccc;
   color: #081c3a;
 }
 .posts-section .journal-left-wrapper .journal-post-info .large-journal-content .button .subtitle {
