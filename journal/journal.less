@@ -1,0 +1,111 @@
+@vw: 19.20vw;
+
+@border-width: (20px / @vw);
+@border-width-big: (25px / @vw);
+
+@padding-large: (500px / @vw);
+@padding-big: (300px / @vw);
+@padding-small: (200px / @vw);
+@padding-mini: (100px / @vw);
+
+@shadow: rgba(192, 192, 211, 0.1);
+
+body {
+    background-color: aquamarine;
+}
+
+// agents section
+.agents-section {
+    background-color: #f7f8fc;
+    margin-left: (1500px / @vw);
+    padding: 0px (1500px / @vw) (3800px / @vw);
+
+    .subtitle-intro-wrapper {
+        display: flex;
+        align-items: center;
+
+        .horizontal-line {
+            margin: 0px @padding-big;
+        }
+
+        .button {
+            background-color: transparent;
+            border: @border-width solid rgba(192, 192, 211, 0.2);
+            padding: (160px / @vw) (300px / @vw);
+        }
+
+        .button:hover {
+            background-color: #081c3a;
+            color: #fff;
+            border-color: #081c3a;
+        }
+    }
+
+    .team-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        background-color: #fff;
+        border-radius: (300px / @vw);
+        border: @border-width solid rgba(192, 192, 211, 0.2);
+
+        margin-top: @padding-large;
+
+        list-style: none;
+
+        .team-member {
+            padding: @padding-big;
+
+            background-color: #fff;
+            border-radius: (300px / @vw);
+
+            transition: all 1s ease;
+
+            .team-card {
+                display: grid;
+                grid-template-rows: 1fr auto;
+                row-gap: @padding-big;
+
+                .team-member-pic {
+                    height: (5200px / @vw);
+                    overflow: hidden;
+                    border-radius: (250px / @vw);
+
+                    .team-img {
+                        height: 100%;
+                        background-size: cover;
+                        background-position: 50% 50%;
+
+                        transition: transform 1s ease;
+                    }
+                }
+
+                .team-member-info {
+                    h3 {
+                        color: black;
+                        margin-bottom: @padding-small;
+
+                        font-size: (400px / @vw);
+                        font-weight: 500;
+                    }
+
+                    p {
+                        font-size: (250px / @vw);
+                    }
+                }
+
+            }
+        }
+
+        .team-member:hover {
+            transform: scale(1.05);
+            z-index: 1;
+            box-shadow: 0px @padding-small @padding-small @padding-small @shadow;
+        }
+
+        .team-member:hover .team-img {
+            transform: scale3d(1.1, 1.1, 1.1);
+        }
+    }
+}
+

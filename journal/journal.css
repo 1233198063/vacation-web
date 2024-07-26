@@ -1,0 +1,73 @@
+body {
+  background-color: aquamarine;
+}
+.agents-section {
+  background-color: #f7f8fc;
+  margin-left: 78.125px;
+  padding: 0px 78.125px 197.91666667px;
+}
+.agents-section .subtitle-intro-wrapper {
+  display: flex;
+  align-items: center;
+}
+.agents-section .subtitle-intro-wrapper .horizontal-line {
+  margin: 0px 15.625px;
+}
+.agents-section .subtitle-intro-wrapper .button {
+  background-color: transparent;
+  border: 1.04166667px solid rgba(192, 192, 211, 0.2);
+  padding: 8.33333333px 15.625px;
+}
+.agents-section .subtitle-intro-wrapper .button:hover {
+  background-color: #081c3a;
+  color: #fff;
+  border-color: #081c3a;
+}
+.agents-section .team-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: #fff;
+  border-radius: 15.625px;
+  border: 1.04166667px solid rgba(192, 192, 211, 0.2);
+  margin-top: 26.04166667px;
+  list-style: none;
+}
+.agents-section .team-box .team-member {
+  padding: 15.625px;
+  background-color: #fff;
+  border-radius: 15.625px;
+  transition: all 1s ease;
+}
+.agents-section .team-box .team-member .team-card {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  row-gap: 15.625px;
+}
+.agents-section .team-box .team-member .team-card .team-member-pic {
+  height: 270.83333333px;
+  overflow: hidden;
+  border-radius: 13.02083333px;
+}
+.agents-section .team-box .team-member .team-card .team-member-pic .team-img {
+  height: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+  transition: transform 1s ease;
+}
+.agents-section .team-box .team-member .team-card .team-member-info h3 {
+  color: black;
+  margin-bottom: 10.41666667px;
+  font-size: 20.83333333px;
+  font-weight: 500;
+}
+.agents-section .team-box .team-member .team-card .team-member-info p {
+  font-size: 13.02083333px;
+}
+.agents-section .team-box .team-member:hover {
+  transform: scale(1.05);
+  z-index: 1;
+  box-shadow: 0px 10.41666667px 10.41666667px 10.41666667px rgba(192, 192, 211, 0.1);
+}
+.agents-section .team-box .team-member:hover .team-img {
+  transform: scale3d(1.1, 1.1, 1.1);
+}

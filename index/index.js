@@ -476,7 +476,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // agents section
+    // posts section
     const postArr = [
         'url(./images/607dcc96ac469709cab4439e_post003.jpeg)',
         'url(./images/607dcc84b5be0d0f5f378014_post002.jpeg)',
@@ -484,7 +484,6 @@ document.addEventListener("DOMContentLoaded", function () {
         'url(./images/607dcd0c2a32b5e7275ff68b_post009.jpeg)',
     ];
 
-    // post section
     const postImg = document.querySelectorAll('.journal-list-image .post-img');
 
     postImg.forEach((div, index) => {
