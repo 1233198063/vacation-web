@@ -13,8 +13,239 @@
 @shadow: rgba(192, 192, 211, 0.1);
 
 .page-hero {
+    background-image: url(../images/607503213f245d75fcd95368_Travel002.jpeg);
+
     h1 {
-        max-width: (8000px / @vw);
+        max-width: (15000px / @vw);
         text-align: center;
+    }
+}
+
+.form-section {
+    background-color: #fff;
+    margin-top: -(1000px / @vw);
+    margin-left: (1800px / @vw);
+    margin-right: @margin-left;
+    border-radius: @padding-mini;
+
+    padding: @padding-large;
+
+    position: relative;
+    z-index: 5;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .subtitle.form-title {
+        margin-bottom: @margin-left;
+    }
+
+    .form-and-links {
+        height: (8000px / @vw);
+
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: (2 * @padding-large);
+
+
+        //left part
+        .form-block {
+            overflow: scroll;
+            scrollbar-width: none;
+            width: (10000px / @vw);
+            background-color: #f7f8fc;
+            border-radius: @padding-small;
+            border: @border-width-big solid rgba(192, 192, 211, 0.2);
+            padding: (2 * @padding-large);
+
+            display: grid;
+            grid-template-rows: repeat(5, auto);
+            row-gap: @padding-large;
+
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .form-item {
+                display: flex;
+                flex-direction: column;
+
+                .name-input {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                label {
+                    margin-bottom: @padding-big;
+                    font-size: (280px / @vw);
+                    font-weight: 600;
+                }
+
+                input {
+                    min-height: (1050px / @vw);
+                    margin-bottom: 0px;
+                    padding-top: @padding-small;
+                    padding-bottom: @padding-small;
+                    padding-left: @padding-small;
+                    border: @border-width-big solid rgba(192, 192, 211, 0.2);
+                    border-radius: @padding-mini;
+                    transition: all 0.5s;
+                }
+
+                textarea {
+                    min-height: (2 * @margin-left);
+                    padding-top: @padding-small;
+                    padding-left: @padding-small;
+                    border: @border-width-big solid rgba(192, 192, 211, 0.2);
+                    border-radius: @padding-mini;
+                }
+            }
+        }
+
+        // right part
+        .info-box.links {
+            .subtitle-wrapper {
+                display: flex;
+                align-items: center;
+            }
+
+            .contact-item {
+                height: (2.5 * @padding-large);
+            }
+
+        }
+    }
+}
+
+// agents section
+.agents-section {
+    background-color: #f7f8fc;
+    margin-left: (1500px / @vw);
+    padding-bottom: (2 * @margin-left);
+    margin-top: @margin-left;
+
+    .subtitle-intro-wrapper {
+        position: relative;
+        background-image: url('../images/607dcd2961c3e396968aac28_031.jpeg');
+        background-size: cover;
+        background-position: 50% 50%;
+
+        height: (12000px / @vw);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .overlay {
+            position: absolute;
+            left: 0%;
+            top: 0%;
+            right: 0%;
+            bottom: 0%;
+            background-color: rgba(15, 19, 38, 0.55);
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+
+            display: grid;
+            grid-template-rows: auto auto auto;
+            row-gap: @padding-large;
+            justify-items: center;
+
+            text-align: center;
+            color: #fff;
+
+            max-width: (10000px / @vw);
+
+            .subtitle {
+                font-size: (200px / @vw);
+            }
+
+            h1 {
+                font-size: (800px / @vw);
+            }
+
+            p {
+                display: block;
+                color: #fff;
+
+                font-size: (300px / @vw);
+            }
+        }
+
+    }
+
+    .team-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        background-color: #fff;
+        border-radius: (300px / @vw);
+        border: @border-width solid rgba(192, 192, 211, 0.2);
+
+        margin: -@margin-left @margin-left 0px;
+
+        list-style: none;
+
+        position: relative;
+        z-index: 5;
+
+        .team-member {
+            padding: @padding-big;
+
+            background-color: #fff;
+            border-radius: (300px / @vw);
+
+            transition: all 1s ease;
+
+            .team-card {
+                display: grid;
+                grid-template-rows: 1fr auto;
+                row-gap: @padding-big;
+
+                .team-member-pic {
+                    height: (5200px / @vw);
+                    overflow: hidden;
+                    border-radius: (250px / @vw);
+
+                    .team-img {
+                        height: 100%;
+                        background-size: cover;
+                        background-position: 50% 50%;
+
+                        transition: transform 1s ease;
+                    }
+                }
+
+                .team-member-info {
+                    h3 {
+                        color: black;
+                        margin-bottom: @padding-small;
+
+                        font-size: (400px / @vw);
+                        font-weight: 500;
+                    }
+
+                    p {
+                        font-size: (250px / @vw);
+                    }
+                }
+
+            }
+        }
+
+        .team-member:hover {
+            transform: scale(1.05);
+            z-index: 1;
+            box-shadow: 0px @padding-small @padding-small @padding-small @shadow;
+        }
+
+        .team-member:hover .team-img {
+            transform: scale3d(1.1, 1.1, 1.1);
+        }
     }
 }

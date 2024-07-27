@@ -117,9 +117,12 @@
   right: 0%;
   bottom: 0%;
   margin: -36.45833333px 0px;
-  background-position: 50% 50%;
+  background-position-y: 50%;
+  background-position-x: 50%;
   background-size: cover;
   background-repeat: no-repeat;
+  transition: transform 0.8s;
+  transform: translateY(0);
 }
 .agents-section {
   background-color: #f7f8fc;

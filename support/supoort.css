@@ -1,4 +1,177 @@
+.page-hero {
+  background-image: url(../images/607503213f245d75fcd95368_Travel002.jpeg);
+}
 .page-hero h1 {
-  max-width: 416.66666667px;
+  max-width: 781.25px;
   text-align: center;
+}
+.form-section {
+  background-color: #fff;
+  margin-top: -52.08333333px;
+  margin-left: 93.75px;
+  margin-right: 78.125px;
+  border-radius: 5.20833333px;
+  padding: 26.04166667px;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-section .subtitle.form-title {
+  margin-bottom: 78.125px;
+}
+.form-section .form-and-links {
+  height: 416.66666667px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 52.08333333px;
+}
+.form-section .form-and-links .form-block {
+  overflow: scroll;
+  scrollbar-width: none;
+  width: 520.83333333px;
+  background-color: #f7f8fc;
+  border-radius: 10.41666667px;
+  border: 1.30208333px solid rgba(192, 192, 211, 0.2);
+  padding: 52.08333333px;
+  display: grid;
+  grid-template-rows: repeat(5, auto);
+  row-gap: 26.04166667px;
+}
+.form-section .form-and-links .form-block::-webkit-scrollbar {
+  display: none;
+}
+.form-section .form-and-links .form-block .form-item {
+  display: flex;
+  flex-direction: column;
+}
+.form-section .form-and-links .form-block .form-item .name-input {
+  display: flex;
+  justify-content: space-between;
+}
+.form-section .form-and-links .form-block .form-item label {
+  margin-bottom: 15.625px;
+  font-size: 14.58333333px;
+  font-weight: 600;
+}
+.form-section .form-and-links .form-block .form-item input {
+  min-height: 54.6875px;
+  margin-bottom: 0px;
+  padding-top: 10.41666667px;
+  padding-bottom: 10.41666667px;
+  padding-left: 10.41666667px;
+  border: 1.30208333px solid rgba(192, 192, 211, 0.2);
+  border-radius: 5.20833333px;
+  transition: all 0.5s;
+}
+.form-section .form-and-links .form-block .form-item textarea {
+  min-height: 156.25px;
+  padding-top: 10.41666667px;
+  padding-left: 10.41666667px;
+  border: 1.30208333px solid rgba(192, 192, 211, 0.2);
+  border-radius: 5.20833333px;
+}
+.form-section .form-and-links .info-box.links .subtitle-wrapper {
+  display: flex;
+  align-items: center;
+}
+.form-section .form-and-links .info-box.links .contact-item {
+  height: 65.10416667px;
+}
+.agents-section {
+  background-color: #f7f8fc;
+  margin-left: 78.125px;
+  padding-bottom: 156.25px;
+  margin-top: 78.125px;
+}
+.agents-section .subtitle-intro-wrapper {
+  position: relative;
+  background-image: url('../images/607dcd2961c3e396968aac28_031.jpeg');
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 625px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.agents-section .subtitle-intro-wrapper .overlay {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  background-color: rgba(15, 19, 38, 0.55);
+}
+.agents-section .subtitle-intro-wrapper .content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  row-gap: 26.04166667px;
+  justify-items: center;
+  text-align: center;
+  color: #fff;
+  max-width: 520.83333333px;
+}
+.agents-section .subtitle-intro-wrapper .content .subtitle {
+  font-size: 10.41666667px;
+}
+.agents-section .subtitle-intro-wrapper .content h1 {
+  font-size: 41.66666667px;
+}
+.agents-section .subtitle-intro-wrapper .content p {
+  display: block;
+  color: #fff;
+  font-size: 15.625px;
+}
+.agents-section .team-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: #fff;
+  border-radius: 15.625px;
+  border: 1.04166667px solid rgba(192, 192, 211, 0.2);
+  margin: -78.125px 78.125px 0px;
+  list-style: none;
+  position: relative;
+  z-index: 5;
+}
+.agents-section .team-box .team-member {
+  padding: 15.625px;
+  background-color: #fff;
+  border-radius: 15.625px;
+  transition: all 1s ease;
+}
+.agents-section .team-box .team-member .team-card {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  row-gap: 15.625px;
+}
+.agents-section .team-box .team-member .team-card .team-member-pic {
+  height: 270.83333333px;
+  overflow: hidden;
+  border-radius: 13.02083333px;
+}
+.agents-section .team-box .team-member .team-card .team-member-pic .team-img {
+  height: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+  transition: transform 1s ease;
+}
+.agents-section .team-box .team-member .team-card .team-member-info h3 {
+  color: black;
+  margin-bottom: 10.41666667px;
+  font-size: 20.83333333px;
+  font-weight: 500;
+}
+.agents-section .team-box .team-member .team-card .team-member-info p {
+  font-size: 13.02083333px;
+}
+.agents-section .team-box .team-member:hover {
+  transform: scale(1.05);
+  z-index: 1;
+  box-shadow: 0px 10.41666667px 10.41666667px 10.41666667px rgba(192, 192, 211, 0.1);
+}
+.agents-section .team-box .team-member:hover .team-img {
+  transform: scale3d(1.1, 1.1, 1.1);
 }
