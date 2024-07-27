@@ -76,3 +76,75 @@ window.addEventListener('scroll', () => {
     indicator.style.top = `${indicatorPosition}px`;
 
 });
+
+// posts section
+const postArr = [
+    'url(../images/607dcc96ac469709cab4439e_post003.jpeg)',
+    'url(../images/607dcc84b5be0d0f5f378014_post002.jpeg)',
+    'url(../images/607dccc6e99d455d30eb59a4_post006.jpeg)',
+    'url(../images/607dcd0c2a32b5e7275ff68b_post009.jpeg)',
+];
+
+const postImg = document.querySelectorAll('.journal-list-image .post-img');
+
+postImg.forEach((div, index) => {
+    if (postArr[index]) {
+        div.style.backgroundImage = postArr[index];
+    }
+});
+
+
+// browse journal
+const journalArr = [
+    {
+        img: '../images/607dcc96ac469709cab4439e_post003.jpeg',
+        title: '7 of the Best Examples of Beautiful Blog Design'
+    },
+    {
+        img: '../images/607dcc84b5be0d0f5f378014_post002.jpeg',
+        title: 'Designers Who Changed the Web'
+    },
+    {
+        img: '../images/607dccc6e99d455d30eb59a4_post006.jpeg',
+        title: "10 Web Design Blogs You Can't Miss"
+    },
+    {
+        img: '../images/607dcd0c2a32b5e7275ff68b_post009.jpeg',
+        title: '5 Principles Of Effective Web Design'
+    },
+    {
+        img: '../images/607dccb5b05ec343aa84127a_post005.jpeg',
+        title: 'How to improve Web Design Process'
+    },
+    {
+        img: '../images/607dcce94ed8fef8efd42b7a_post010.jpeg',
+        title: '14 Common Misconceptions About Web Design'
+    },
+];
+
+const posts = document.querySelectorAll('.post');
+
+posts.forEach((post, index) => {
+    if (journalArr[index]) {
+        const imgDiv = post.querySelector('.post-img');
+        const titleH3 = post.querySelector('h3');
+        imgDiv.style.backgroundImage = `url(${journalArr[index].img})`;
+        titleH3.textContent = journalArr[index].title;
+    }
+});
+
+
+// promise section
+window.addEventListener('scroll', function () {
+    const promiseSection = document.querySelector('.promise-section');
+    const promiseBackground = document.querySelector('.promise-section .background');
+    const promiseRect = promiseSection.getBoundingClientRect();
+
+    if (promiseRect.top <= this.window.innerHeight && promiseRect.bottom >= 0) {
+        const scrollProgress = (window.innerHeight - promiseRect.top) / (window.innerHeight + promiseRect.height);
+        const translateY = (scrollProgress - 0.5) * 30;
+
+        promiseBackground.style.transform = `translateY(${translateY}%))`
+        promiseBackground.style.backgroundPositionY = `${50 + translateY}%`
+    }
+})

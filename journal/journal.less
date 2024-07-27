@@ -8,104 +8,411 @@
 @padding-small: (200px / @vw);
 @padding-mini: (100px / @vw);
 
+@margin-left: (1500px / @vw);
+
 @shadow: rgba(192, 192, 211, 0.1);
 
-body {
-    background-color: aquamarine;
+//page hero
+.page-hero {
+    background-image: url(../images/6075041a5cc5c760b623c7e7_Travel004.jpeg);
+    h1 {
+        text-align: center;
+    }
 }
 
-// agents section
-.agents-section {
-    background-color: #f7f8fc;
-    margin-left: (1500px / @vw);
-    padding: 0px (1500px / @vw) (3800px / @vw);
+// posts section
+.posts-section {
+    margin: -(1500px / @vw) (1500px / @vw) (2500px / @vw) (3000px / @vw);
+    padding: (1000px / @vw);
 
-    .subtitle-intro-wrapper {
-        display: flex;
-        align-items: center;
+    background-color: #fff;
+    border-radius: @padding-mini;
 
-        .horizontal-line {
-            margin: 0px @padding-big;
-        }
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    column-gap: (900px / @vw);
 
-        .button {
-            background-color: transparent;
-            border: @border-width solid rgba(192, 192, 211, 0.2);
-            padding: (160px / @vw) (300px / @vw);
-        }
+    min-height: (15000px / @vw);
 
-        .button:hover {
-            background-color: #081c3a;
-            color: #fff;
-            border-color: #081c3a;
-        }
-    }
+    position: relative;
+    z-index: 1;
 
-    .team-box {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+    //left part
+    //big image and heading card
+    .journal-left-wrapper {
+        position: relative;
 
-        background-color: #fff;
-        border-radius: (300px / @vw);
-        border: @border-width solid rgba(192, 192, 211, 0.2);
-
-        margin-top: @padding-large;
-
-        list-style: none;
-
-        .team-member {
-            padding: @padding-big;
-
-            background-color: #fff;
+        .large-journal-img-wrapper {
             border-radius: (300px / @vw);
+            height: 100%;
+            width: 100%;
 
-            transition: all 1s ease;
+            overflow: hidden;
 
-            .team-card {
-                display: grid;
-                grid-template-rows: 1fr auto;
-                row-gap: @padding-big;
+            .large-journal-img {
+                height: 100%;
+                width: 100%;
 
-                .team-member-pic {
-                    height: (5200px / @vw);
-                    overflow: hidden;
-                    border-radius: (250px / @vw);
+                background-image: url(../images/607dcc73e99d454e25eb062b_post001.jpeg);
 
-                    .team-img {
-                        height: 100%;
-                        background-size: cover;
-                        background-position: 50% 50%;
+                background-size: cover;
+                background-position: 50% 50%;
 
-                        transition: transform 1s ease;
-                    }
-                }
-
-                .team-member-info {
-                    h3 {
-                        color: black;
-                        margin-bottom: @padding-small;
-
-                        font-size: (400px / @vw);
-                        font-weight: 500;
-                    }
-
-                    p {
-                        font-size: (250px / @vw);
-                    }
-                }
-
+                transition: transform 0.8s ease;
             }
         }
 
-        .team-member:hover {
-            transform: scale(1.05);
-            z-index: 1;
-            box-shadow: 0px @padding-small @padding-small @padding-small @shadow;
+        .large-journal-img-wrapper:hover {
+            .large-journal-img {
+                transform: scale3d(1.1, 1.1, 1.1);
+            }
         }
 
-        .team-member:hover .team-img {
-            transform: scale3d(1.1, 1.1, 1.1);
+        .journal-post-info {
+            position: absolute;
+            bottom: -(1500px / @vw);
+
+            .large-journal-content {
+                position: relative;
+
+                background-color: #fff;
+                border-radius: (300px / @vw);
+                box-shadow: 0 (60px / @vw) (480px / @vw) (-40px / @vw) rgba(53, 64, 117, 0.1);
+
+                margin: 0px @padding-large;
+                padding: @padding-large;
+
+                display: grid;
+                grid-template-rows: auto;
+                row-gap: @padding-big;
+
+                .journal-category-tag {
+                    position: absolute;
+                    top: -(250px / @vw);
+                    left: @padding-big;
+
+                    height: (500px / @vw);
+                    background-color: #f7f8fc;
+                    border-radius: (100px / @vw);
+                    padding: 0px (200px / @vw);
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .subtitle {
+                        font-size: (150px / @vw);
+                    }
+                }
+
+                .button {
+                    height: @padding-big;
+                    width: (2000px / @vw);
+                    padding: (300px / @vw) (200px / @vw);
+
+                    border: @border-width solid #ccc;
+                    color: #081c3a;
+
+                    .subtitle {
+                        letter-spacing: (20px / @vw);
+                        font-size: (180px / @vw);
+                    }
+                }
+
+                .button:hover {
+                    background-color: #081c3a;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    //right part
+    //popular posts
+    .journal-right-wrapper {
+        height: 100%;
+
+        .subtitle-intro-wrapper {
+            display: flex;
+            margin-bottom: @padding-large;
+
+            .subtitle {
+                margin-right: @padding-big;
+            }
+        }
+
+        .post-list {
+            list-style: none;
+
+            display: grid;
+            grid-template-rows: repeat(4, 1fr);
+            row-gap: @padding-small;
+
+            height: 100%;
+
+            .post-item {
+                background-color: #fff;
+                border-radius: @padding-mini;
+                padding: @padding-mini;
+
+                transition: all 1s ease;
+
+                a {
+                    display: grid;
+                    grid-template-columns: 1fr 2fr;
+                    column-gap: @padding-big;
+                    height: 100%;
+                    text-decoration: none;
+                    color: #081c3a;
+
+                    .journal-list-image {
+                        width: (2800px / @vw);
+                        height: 100%;
+                        border-radius: @padding-mini;
+                        overflow: hidden;
+
+                        .post-img {
+                            width: 100%;
+                            height: 100%;
+
+                            background-size: cover;
+                            background-position: 50% 50%;
+                            transition: all 1s;
+                        }
+                    }
+                }
+            }
+
+            .post-item:hover {
+                transform: scale(1.05);
+                box-shadow: 0 (60px / @vw) (480px / @vw) (-40px / @vw) rgba(53, 64, 117, 0.2);
+
+                .post-img {
+                    transform: scale3d(1.1, 1.1, 1.1);
+                }
+            }
+
+            .journal-list-item-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+
+                .journal-category-tag {
+                    background-color: #f7f8fc;
+                    padding: @padding-mini;
+                    max-width: (2200px / @vw);
+
+                    font-size: (150px / @vw);
+                }
+
+                h3 {
+                    font-weight: 600;
+                    font-size: (360px / @vw);
+                }
+            }
         }
     }
 }
 
+.browse-journal {
+    margin-left: @margin-left;
+    padding: @margin-left;
+    background-color: #f7f8fc;
+
+    .browse-intro {
+        display: grid;
+        grid-template-rows: auto auto;
+        row-gap: @padding-big;
+    }
+
+    .browse-post {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: @padding-big;
+        row-gap: @padding-big;
+
+        margin: @padding-large 0px @margin-left;
+
+        .post {
+            background-color: #fff;
+            box-shadow: 0 12px 36px -8px rgba(53, 64, 117, 0.1);
+            border-radius: @padding-mini;
+
+            overflow: hidden;
+
+            transition: all 0.5s;
+
+            display: flex;
+            flex-direction: column;
+
+            padding-bottom: @padding-large;
+            
+
+            .post-top {
+                height: (5000px / @vw);
+                width: 100%;
+
+                overflow: hidden;
+
+                .post-img {
+                    height: 100%;
+                    width: 100%;
+                    background-size: cover;
+                    background-position: 50% 50%;
+
+                    transition: all 0.5s;
+                }
+            }
+
+            .post-bottom {
+                height: (5000px / @vw);
+                padding: 0px @padding-large;
+                padding-top: (900px / @vw);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                position: relative;
+
+                .subtitle {
+                    background-color: #f7f8fc;
+                    border-radius: @padding-mini;
+                    padding: @padding-small @padding-mini;
+
+                    font-size: (160px / @vw);
+                    letter-spacing: (60px / @vw);
+
+                    max-width: (2200px / @vw);
+
+                    position: absolute;
+                    top: -(260px / @vw);
+                    left: @padding-big;
+                    z-index: 5;
+                }
+
+                h3 {
+                    font-size: (400px / @vw);
+                    font-weight: 500;
+                }
+
+                p {
+                    font-size: (300px / @vw);
+                    line-height: (400px / @vw);
+                }
+                
+                .button-container {
+                    display: flex;
+                    justify-content: flex-start;
+                }
+
+                .button.white {
+                    border: @border-width solid rgba(192, 192, 211, 0.2);
+                    width: (2200px / @vw);
+                }
+
+                .button:hover {
+                    background-color: #081c3a;
+                    color: #fff;
+                }
+            }
+        }
+
+        .post:hover {
+            transform: scale3d(0.98, 0.98, 0.98);
+
+            .post-img {
+                transform: scale3d(1.1, 1.1, 1.1);
+            }
+        }
+    }
+
+    .last-button {
+        max-width: (2200px / @vw);
+        margin: 0px auto;
+
+        span {
+            font-size: (250px / @vw);
+        }
+    }
+}
+
+//promise section
+.promise-section {
+    height: (12000px / @vw);
+    margin-left: (1500px / @vw);
+
+    overflow: hidden;
+
+    position: relative;
+
+    .container {
+        position: relative;
+        z-index: 2;
+
+        display: grid;
+        grid-template-rows: 1fr auto;
+        row-gap: @padding-large;
+        justify-content: center;
+        justify-items: center;
+
+        padding: (3500px / @vw) 0px;
+
+        .text {
+            max-width: (15000px / @vw);
+            text-align: center;
+
+            .subtitle {
+                color: #fff;
+                margin-bottom: @padding-big;
+            }
+
+            h1 {
+                color: #fff;
+            }
+        }
+
+        .buttons {
+            display: flex;
+
+            .button {
+                width: (3500px / @vw);
+                height: (900px / @vw);
+                letter-spacing: (20px / @vw);
+            }
+
+            .button.works {
+                background-color: transparent;
+                border: #fff @border-width solid;
+                font-weight: 600;
+                margin-left: @padding-small;
+            }
+        }
+    }
+
+    .overlay {
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        right: 0%;
+        bottom: 0%;
+        background-color: rgba(15, 19, 38, 0.55);
+        z-index: 1;
+    }
+
+    .background {
+        background-image: url(../images/607dcd2961c3e396968aac28_031.jpeg);
+        background-size: cover;
+        background-position: center;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+
+        // background image transition with js code
+        transition: transform 0.5s ease, background-position 0.5s ease;
+    }
+}
