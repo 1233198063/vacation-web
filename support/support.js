@@ -77,42 +77,37 @@ window.addEventListener('scroll', () => {
 
 });
 
-// mission gallary
-const gallaryArr = [
-    'url(../images/Family003.jpeg)',
-    'url(../images/Family006.jpeg)',
-    'url(../images/Family004.jpeg)',
-    'url(../images/gallary030.jpeg)',
-    'url(../images/gallary029.jpeg)',
-    'url(../images/607dcd3355581e17e093caed_011.jpeg)',
-    'url(../images/607dcd2961c3e396968aac28_031.jpeg)'
-];
-
-const missionImgs = document.querySelectorAll('.bottom-gallary .mission-img');
-
-missionImgs.forEach((div, index) => {
-    if (gallaryArr[index]) {
-        div.style.backgroundImage = gallaryArr[index];
-    }
-})
+// form section
+const infoBox = document.querySelector('.info-box.links');
+const formRight = document.querySelector('.form-right');
+const formSection = document.querySelector('.form-section');
 
 window.addEventListener('scroll', function () {
-    const bottomGallary = document.querySelector('.bottom-gallary');
-    const gallaryRect = bottomGallary.getBoundingClientRect();
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const formRightRect = formRight.getBoundingClientRect();
+    const formSectionRect = formSection.getBoundingClientRect();
 
-    if (gallaryRect.top <= this.window.innerHeight && gallaryRect.bottom >= 0) {
-        const scrollProgress = (window.innerHeight - gallaryRect.top) / (window.innerHeight + gallaryRect.height);
-        const translateY = -(scrollProgress - 0.5) * 30;
+    const sectionTop = formRightRect.top + scrollTop;
+    const sectionBottom = sectionTop + formRight.offsetHeight;
 
-        missionImgs.forEach((div) => {
-            div.style.transform = `translateY(${translateY}%)`;
-            div.style.backgroundPositionY = `${50 + translateY}%`;
-        });
+    if (scrollTop >= sectionTop && scrollTop <= sectionBottom - window.innerHeight) {
+        infoBox.style.position = 'fixed';
+        infoBox.style.top = '(1500px / @vw)';
+        infoBox.style.right = '(1800px / @vw)';
+        infoBox.style.width = `${formRight.offsetWidth}px`;
+    } else if (scrollTop > sectionBottom - window.innerHeight) {
+        infoBox.style.position = 'absolute';
+        infoBox.style.top = (formRight.offsetHeight - infoBox.offsetHeight) + 'px';
+        infoBox.style.width = '100%';
+    } else {
+        infoBox.style.position = 'absolute';
+        infoBox.style.top = '0px';
+        infoBox.style.width = '100%';
     }
-})
+});
+
 
 // agents section
-
 window.addEventListener('scroll', function () {
     const agentsSection = document.querySelector('.agents-section');
     const agentsBackground = document.querySelector('.agents-section .subtitle-intro-wrapper');

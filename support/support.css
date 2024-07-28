@@ -22,15 +22,11 @@
   margin-bottom: 78.125px;
 }
 .form-section .form-and-links {
-  height: 416.66666667px;
   display: grid;
   grid-template-columns: 2fr 1fr;
   column-gap: 52.08333333px;
 }
 .form-section .form-and-links .form-block {
-  overflow: scroll;
-  scrollbar-width: none;
-  width: 781.25px;
   background-color: #f7f8fc;
   border-radius: 10.41666667px;
   border: 1.30208333px solid rgba(192, 192, 211, 0.2);
@@ -38,9 +34,6 @@
   display: grid;
   grid-template-rows: repeat(5, auto);
   row-gap: 26.04166667px;
-}
-.form-section .form-and-links .form-block::-webkit-scrollbar {
-  display: none;
 }
 .form-section .form-and-links .form-block .form-item {
   display: flex;
@@ -72,11 +65,22 @@
   border: 1.30208333px solid rgba(192, 192, 211, 0.2);
   border-radius: 5.20833333px;
 }
-.form-section .form-and-links .info-box.links .subtitle-wrapper {
+.form-section .form-and-links .form-right {
+  position: relative;
+}
+.form-section .form-and-links .form-right .info-box.links {
+  position: absolute;
+  /* Start with absolute positioning */
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  transition: top 0.8s;
+}
+.form-section .form-and-links .form-right .info-box.links .subtitle-wrapper {
   display: flex;
   align-items: center;
 }
-.form-section .form-and-links .info-box.links .contact-item {
+.form-section .form-and-links .form-right .info-box.links .contact-item {
   height: 65.10416667px;
 }
 .agents-section {
