@@ -920,8 +920,8 @@
 }
 .steps-section .steps-sticky-card {
   display: grid;
-  grid-row: 1fr 2fr auto;
-  row-gap: 26.04166667px;
+  align-content: stretch;
+  align-items: center;
   padding: 15.625px;
   background-color: #e6e6f3;
   border-radius: 15.625px;
@@ -935,14 +935,13 @@
 }
 .steps-section .steps-sticky-card .steps-description {
   display: grid;
-  grid-template-rows: auto 1fr auto;
-  row-gap: 15.625px;
+  align-content: space-evenly;
 }
 .steps-section .steps-sticky-card .steps-description .subtitle {
   color: #516381;
 }
 .steps-section .steps-sticky-card .button {
-  margin-bottom: 26.04166667px;
+  margin-bottom: 0px;
   max-width: 260.41666667px;
   max-height: 41.66666667px;
   padding-left: 10.41666667px;
