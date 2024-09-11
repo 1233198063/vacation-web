@@ -1,4 +1,4 @@
-# Vacaition Website - COVILLA
+# Vacation Website - COVILLA
 Welcome to COVILLA, a family-oriented travel website designed to help you plan your next vacation with ease. With a wide range of destinations and hand-picked vacation packages, we make it simple to find the perfect getaway for you and your loved ones.
 
 ## Features
