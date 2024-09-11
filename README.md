@@ -28,5 +28,3 @@ Welcome to COVILLA, a family-oriented travel website designed to help you plan y
 `git clone https://github.com/your-username/your-repo.git`
 - Open the index.html file in your browser to explore the website.
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for more details.
