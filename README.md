@@ -25,6 +25,6 @@ Welcome to COVILLA, a family-oriented travel website designed to help you plan y
 
 ## How to Use
 - Clone the repository:
-`git clone https://github.com/your-username/your-repo.git`
+`git clone https://github.com/1233198063/vacation-web.git`
 - Open the index.html file in your browser to explore the website.
 
